@@ -1,0 +1,15 @@
+{
+    "name": "Hello World",
+    "description": "We are building extensions!",
+    "version": "1.2",
+    "manifest_version": 2,
+
+    "content_scripts": [{
+        "matches": ["<all_urls>"],
+        "js": [
+            "content.js"
+        ],
+        "run_at": "document_end"
+    }],
+
+}
