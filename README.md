@@ -1,24 +1,43 @@
 # Explode the Web
-A series of tutorials showing how to make browser extensions
+A tutorial showing how to make a browser extension that explodes web pages with third party trackers.
+
+```[./explode-the-web](./explode-the-web)``` contains the finished extension
+```[./tutorial](./tutorial)``` contains
 
 
-
-## 1. Watching web pages (Hello world example)
+## Part 1. Hello World!
 
 HTML, CSS, Javascript, and jQuery
 Manifest.json
-Background scripts
 Content Scripts
 
 
-## 2. Hacking web pages (Access / change DOM elements example)
+## Part 2: The Document Object Model (DOM)
 
 Accessing DOM elements
 Manipulating the DOM
-Exploding web pages (This web page will explode in… example)
+
+
+## Part 3: Tracking the trackers
+
+
 Use JSON to look for trackers
+
+
+
+## Part 4: Explode the web!
+
+Adding a browser_action
+Testing the explosion
 Settimeout to give user time to opt out
-Manipulate all block level elements
+Connecting the tracker script to the explosion
 
 
-## 3. Explode the web
+
+
+
+## Credits
+
+Owen Mundy
+Joelle Dietrick
+Grett Louw
