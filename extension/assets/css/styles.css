@@ -44,15 +44,15 @@
     position: fixed;
     z-index: 2147483645;
     bottom: 5px;
-    right: -5px;
-    width: 131px;
-    height: 109px;
+    right: 5px;
+    width: 130px;
+    height: 130px;
 }
 .explode-counter-text {
     color: #fff;
     text-align: center;
-    font: 30px/35px monospace;
-    margin-top: 38px;
+    font: 34px/39px monospace;
+    margin-top: 48px;
 }
 .explode-counter-text button {
     color: #000;
