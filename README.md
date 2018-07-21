@@ -2,7 +2,7 @@
 A tutorial showing how to make a browser extension that explodes web pages with third party trackers.
 
 ```[./explode-the-web](./explode-the-web)``` contains the finished extension
-```[./tutorial](./tutorial)``` contains
+[./tutorial](./tutorial) contains
 
 
 ## Part 1. Hello World!
