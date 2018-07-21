@@ -1,8 +1,12 @@
 # Explode the Web
+------
 A tutorial showing how to make a browser extension that explodes web pages with third party trackers.
 
-```[./explode-the-web](./explode-the-web)``` contains the finished extension
-[./tutorial](./tutorial) contains
+## Project notes
+
+* [./explode-the-web](./explode-the-web) contains the finished extension
+* [./tutorial](./tutorial) contains the tutorial files
+* [./tutorial/sections](./tutorial/sections) contains the finished tutorial section files
 
 
 ## Part 1. Hello World!
