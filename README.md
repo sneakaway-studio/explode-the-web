@@ -2,8 +2,10 @@
 
 A tutorial showing how to make a browser extension that explodes web pages with third party trackers.
 
+Try the extension in [Chrome](https://chrome.google.com/webstore/detail/explode-the-web/dmedbnfdhjfppcgbccpfaigicbnajhod)
 
-Try the extension on the [Chrome Web Store](https://chrome.google.com/webstore/detail/explode-the-web/dmedbnfdhjfppcgbccpfaigicbnajhod)
+
+
 
 
 ## Project notes
