@@ -10,9 +10,9 @@ Try the extension in [Chrome](https://chrome.google.com/webstore/detail/explode-
 
 ## Project notes
 
-* [./explode-the-web](./explode-the-web) contains the finished extension
+* [./extension](./extension) contains the finished extension
+* [./figures](./figures) contains the tutorial figures
 * [./tutorial](./tutorial) contains the tutorial files
-* [./tutorial/sections](./tutorial/sections) contains the finished tutorial section files
 
 
 ## Part 1. Hello World!
@@ -26,13 +26,13 @@ Try the extension in [Chrome](https://chrome.google.com/webstore/detail/explode-
 
 * Accessing DOM elements
 * Manipulating the DOM
+* The Javascript Console
 
 
 ## Part 3: Tracking the trackers
 
-
 * Use JSON to look for trackers
-
+* Reporting trackers in the console
 
 
 ## Part 4: Explode the web!
@@ -43,7 +43,12 @@ Try the extension in [Chrome](https://chrome.google.com/webstore/detail/explode-
 * Connecting the tracker script to the explosion
 
 
+## 3rd party code
 
+* [Disconnect Tracking Services list](https://github.com/disconnectme/disconnect-tracking-protection)
+* [Chrome Extension Hot Reloader](https://github.com/xpl/crx-hotreload)
+* [anime.js](https://github.com/juliangarnier/anime)
+* [jQuery](https://jquery.org)
 
 
 ## Credits
