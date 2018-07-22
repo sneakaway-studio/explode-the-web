@@ -1,3 +1,8 @@
+
+![Exploded CNN](https://github.com/sneakaway-studio/explode-the-web/blob/master/screenshots/exploded-cnn-920x680.png "Exploded CNN")
+
+
+
 # Explode the Web
 
 A tutorial showing how to make a browser extension that explodes web pages with third party trackers.
