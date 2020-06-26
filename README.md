@@ -9,11 +9,6 @@ A browser extension that explodes web pages with third party trackers.
 
 
 
-## Articles
-
-Read the article and tutorial: [Browser Blowup: Explode Web Pages Containing Third-Party Trackers](https://owenmundy.com/_site2017/content/_info/writing/sc_cookbook_2_browser_blowup.pdf) published in [Signal Culture Cookbook Vol.2.](http://signalculture.org/cookbookvol2.html#.XvZmqJNKiL4) Edited by Jason Bernagozzi (2019).
-
-
 ## Install the extension
 
 * [Chrome](https://chrome.google.com/webstore/detail/explode-the-web/dmedbnfdhjfppcgbccpfaigicbnajhod)
@@ -21,12 +16,12 @@ Read the article and tutorial: [Browser Blowup: Explode Web Pages Containing Thi
 
 
 
+## About the tutorial
+
+Read the article and tutorial: [Browser Blowup: Explode Web Pages Containing Third-Party Trackers](https://owenmundy.com/_site2017/content/_info/writing/sc_cookbook_2_browser_blowup.pdf) published in [Signal Culture Cookbook Vol.2.](http://signalculture.org/cookbookvol2.html#.XvZmqJNKiL4) Edited by Jason Bernagozzi (2019).
 
 
-## Notes for the tutorial
-
-
-### Source code
+### Source code nodes
 
 * [./extension](./extension) contains the finished extension
 * [./figures](./figures) contains the tutorial figures
@@ -64,7 +59,7 @@ Read the article and tutorial: [Browser Blowup: Explode Web Pages Containing Thi
 
 
 
-## 3rd party resources 
+## 3rd party resources
 
 * [Disconnect Tracking Services list](https://github.com/disconnectme/disconnect-tracking-protection)
 * [Chrome Extension Hot Reloader](https://github.com/xpl/crx-hotreload)
