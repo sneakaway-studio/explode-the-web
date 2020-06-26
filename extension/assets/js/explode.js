@@ -1,3 +1,5 @@
+"use strict";
+
 /**
  * 	Explode the page
  */
@@ -44,7 +46,19 @@ function explodeThePage() {
 	});
 	// add audio to play explosion sound
 	var audio = new Audio(chrome.extension.getURL('assets/sounds/explode.mp3'));
-	audio.play();
+	// create promise / attempt to play
+	var promise = audio.play();
+	// if play fails then catch error
+	if (promise !== undefined) {
+		promise.then(_ => {
+			// console.log("Autoplay started!");
+		}).catch(err => {
+			// console.log("Autoplay prevented!", err);
+		});
+	}
+
+
+
 }
 
 /**
