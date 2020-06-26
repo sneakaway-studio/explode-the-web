@@ -18,6 +18,7 @@ Try the extension in [Chrome](https://chrome.google.com/webstore/detail/explode-
 * [./extension](./extension) contains the finished extension
 * [./figures](./figures) contains the tutorial figures
 * [./tutorial](./tutorial) contains the tutorial files
+* In order to hot reload scripts add this line to the background `"scripts": ["assets/libs/hot-reload.js"]`
 
 
 ## Part 1. Hello World!
@@ -54,6 +55,11 @@ Try the extension in [Chrome](https://chrome.google.com/webstore/detail/explode-
 * [Chrome Extension Hot Reloader](https://github.com/xpl/crx-hotreload)
 * [anime.js](https://github.com/juliangarnier/anime)
 * [jQuery](https://jquery.org)
+
+
+## Privacy Policy
+
+This extension uses analytics to improve functionality. It does not collect any personally identifiable information (PII).
 
 
 ## Credits
