@@ -9,18 +9,24 @@ A browser extension that explodes web pages with third party trackers.
 
 
 
+## Articles
+
 Read the article and tutorial: [Browser Blowup: Explode Web Pages Containing Third-Party Trackers](https://owenmundy.com/_site2017/content/_info/writing/sc_cookbook_2_browser_blowup.pdf) published in [Signal Culture Cookbook Vol.2.](http://signalculture.org/cookbookvol2.html#.XvZmqJNKiL4) Edited by Jason Bernagozzi (2019).
 
 
 ## Install the extension
-• [Chrome](https://chrome.google.com/webstore/detail/explode-the-web/dmedbnfdhjfppcgbccpfaigicbnajhod)
-• Opera ([coming soon](https://addons.opera.com/en/extensions/)) (currently available using Opera's [Install Chrome Extensions addon](https://addons.opera.com/en/extensions/details/install-chrome-extensions/))
+
+* [Chrome](https://chrome.google.com/webstore/detail/explode-the-web/dmedbnfdhjfppcgbccpfaigicbnajhod)
+* Opera ([coming soon](https://addons.opera.com/en/extensions/)) (currently available using Opera's [Install Chrome Extensions addon](https://addons.opera.com/en/extensions/details/install-chrome-extensions/))
 
 
 
 
 
-## Project notes
+## Notes for the tutorial
+
+
+### Source code
 
 * [./extension](./extension) contains the finished extension
 * [./figures](./figures) contains the tutorial figures
@@ -28,27 +34,27 @@ Read the article and tutorial: [Browser Blowup: Explode Web Pages Containing Thi
 * In order to hot reload scripts add this line to the background `"scripts": ["assets/libs/hot-reload.js"]`
 
 
-## Part 1. Hello World!
+### Part 1. Hello World!
 
 * HTML, CSS, Javascript, and jQuery
 * Manifest.json
 * Content Scripts
 
 
-## Part 2: The Document Object Model (DOM)
+### Part 2: The Document Object Model (DOM)
 
 * Accessing DOM elements
 * Manipulating the DOM
 * The Javascript Console
 
 
-## Part 3: Tracking the trackers
+### Part 3: Tracking the trackers
 
 * Use JSON to look for trackers
 * Reporting trackers in the console
 
 
-## Part 4: Explode the web!
+### Part 4: Explode the web!
 
 * Adding a browser_action
 * Testing the explosion
@@ -56,7 +62,9 @@ Read the article and tutorial: [Browser Blowup: Explode Web Pages Containing Thi
 * Connecting the tracker script to the explosion
 
 
-## 3rd party code
+
+
+## 3rd party resources 
 
 * [Disconnect Tracking Services list](https://github.com/disconnectme/disconnect-tracking-protection)
 * [Chrome Extension Hot Reloader](https://github.com/xpl/crx-hotreload)
