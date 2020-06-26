@@ -1,7 +1,7 @@
 {
     "name": "Explode the Web!",
     "description": "Explode web pages that contain data trackers!",
-    "version": "1.1",
+    "version": "1.2",
     "manifest_version": 2,
     "icons": {
 		"48": "assets/img/explode-icon16.png",
@@ -17,7 +17,7 @@
         "default_popup": "assets/pages/popup.html"
     },
     "background": {
-        "scripts": ["assets/libs/hot-reload.js"]
+        "scripts": []
     },
     "content_scripts": [{
         "matches": ["<all_urls>"],
