@@ -39,8 +39,7 @@
     }],
 	"permissions": [
         "*://*/*",
-        "activeTab",
-        "tabs"
+        "management"
     ],
     "web_accessible_resources": ["*.svg","*.mp3"]
 }

@@ -5,9 +5,16 @@
 
 # Explode the Web
 
-A tutorial showing how to make a browser extension that explodes web pages with third party trackers.
+A browser extension that explodes web pages with third party trackers.
 
-Try the extension in [Chrome](https://chrome.google.com/webstore/detail/explode-the-web/dmedbnfdhjfppcgbccpfaigicbnajhod)
+
+
+Read the article and tutorial: [Browser Blowup: Explode Web Pages Containing Third-Party Trackers](https://owenmundy.com/_site2017/content/_info/writing/sc_cookbook_2_browser_blowup.pdf) published in [Signal Culture Cookbook Vol.2.](http://signalculture.org/cookbookvol2.html#.XvZmqJNKiL4) Edited by Jason Bernagozzi (2019).
+
+
+## Install the extension
+• [Chrome](https://chrome.google.com/webstore/detail/explode-the-web/dmedbnfdhjfppcgbccpfaigicbnajhod)
+• Opera ([coming soon](https://addons.opera.com/en/extensions/)) (currently available using Opera's [Install Chrome Extensions addon](https://addons.opera.com/en/extensions/details/install-chrome-extensions/))
 
 
 
