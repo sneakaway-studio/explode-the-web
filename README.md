@@ -13,8 +13,8 @@ A browser extension that explodes web pages with third party trackers.
 
 * [Chrome](https://chrome.google.com/webstore/detail/explode-the-web/dmedbnfdhjfppcgbccpfaigicbnajhod)
 * [Opera](https://addons.opera.com/en/extensions/) (coming soon) - currently available using Opera's [Install Chrome Extensions addon](https://addons.opera.com/en/extensions/details/install-chrome-extensions/)
-* Firefox (coming soon!)
-* Brave - [available](https://support.brave.com/hc/en-us/articles/360017909112-How-can-I-add-extensions-to-Brave-) via [Chrome Web Store](https://chrome.google.com/webstore/detail/explode-the-web/dmedbnfdhjfppcgbccpfaigicbnajhod)
+* Firefox (coming soon)
+* [Brave](https://chrome.google.com/webstore/detail/explode-the-web/dmedbnfdhjfppcgbccpfaigicbnajhod) - [available via Chrome Web Store](https://support.brave.com/hc/en-us/articles/360017909112-How-can-I-add-extensions-to-Brave-)
 
 
 ## About the tutorial
