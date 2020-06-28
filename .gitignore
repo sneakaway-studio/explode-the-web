@@ -1,3 +1,8 @@
 .DS_Store
 
 keys-and-builds
+
+
+
+*.crx
+*.pem
