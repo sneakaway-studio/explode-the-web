@@ -1,6 +1,6 @@
 {
     "indent": 1,
-    "strict": "global",
+    "strict": "implied",
     "unused": false,
     "browser": true,
     "undef": true,

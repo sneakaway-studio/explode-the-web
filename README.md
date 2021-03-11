@@ -11,10 +11,9 @@ A browser extension that explodes web pages with third party trackers.
 
 ## Install the extension
 
-* [Chrome](https://chrome.google.com/webstore/detail/explode-the-web/dmedbnfdhjfppcgbccpfaigicbnajhod)
-* [Firefox](https://addons.mozilla.org/addon/explode-the-web/)
-* [Brave](https://chrome.google.com/webstore/detail/explode-the-web/dmedbnfdhjfppcgbccpfaigicbnajhod) ([via Chrome Web Store](https://support.brave.com/hc/en-us/articles/360017909112-How-can-I-add-extensions-to-Brave-))
-* [Opera](https://addons.opera.com/en/extensions/) (coming soon) (currently available using Opera's [Install Chrome Extensions addon](https://addons.opera.com/en/extensions/details/install-chrome-extensions/)))
+* Chrome, [Brave](https://support.brave.com/hc/en-us/articles/360017909112-How-can-I-add-extensions-to-Brave-), Opera - Install via [Chrome Web Store](https://chrome.google.com/webstore/detail/explode-the-web/dmedbnfdhjfppcgbccpfaigicbnajhod)
+* Firefox - [Install via Mozilla AddsOns](https://addons.mozilla.org/addon/explode-the-web/)
+
 
 
 ## About the tutorial
@@ -24,9 +23,9 @@ Read the article and tutorial: [Browser Blowup: Explode Web Pages Containing Thi
 
 ### Source code nodes
 
-* [./extension](./extension) contains the finished extension
-* [./figures](./figures) contains the tutorial figures
-* [./tutorial](./tutorial) contains the tutorial files
+* [/extension](./extension) contains the finished extension
+* [/figures](./figures) contains the tutorial figures
+* [/tutorial](./tutorial) contains the tutorial files
 * In order to hot reload scripts add this line to the background `"scripts": ["assets/libs/hot-reload.js"]`
 
 
@@ -54,7 +53,7 @@ Read the article and tutorial: [Browser Blowup: Explode Web Pages Containing Thi
 
 * Adding a browser_action
 * Testing the explosion
-* Settimeout to give user time to opt out
+* `setTimeout()` to give user time to opt out
 * Connecting the tracker script to the explosion
 
 
@@ -77,4 +76,4 @@ This extension uses analytics to improve functionality. It does not collect any 
 
 * Owen Mundy
 * Joelle Dietrick
-* Grett Louw
+* Gretta Louw
