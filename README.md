@@ -19,7 +19,7 @@ A browser extension that explodes web pages with third party trackers.
 
 ## About the tutorial
 
-Read the article and tutorial: [Browser Blowup: Explode Web Pages Containing Third-Party Trackers](https://owenmundy.com/_site2017/content/_info/writing/sc_cookbook_2_browser_blowup.pdf) published in [Signal Culture Cookbook Vol.2.](http://signalculture.org/cookbookvol2.html#.XvZmqJNKiL4) Edited by Jason Bernagozzi (2019).
+Read the article and tutorial: [Browser Blowup: Explode Web Pages Containing Third-Party Trackers](https://owenmundy.com/_site/content/_info/writing/sc_cookbook_2_browser_blowup.pdf) published in [Signal Culture Cookbook Vol.2.](http://signalculture.org/cookbookvol2.html#.XvZmqJNKiL4) Edited by Jason Bernagozzi (2019).
 
 
 ### Source code nodes
