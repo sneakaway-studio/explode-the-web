@@ -1,5 +1,5 @@
 
-![Exploded CNN](https://github.com/sneakaway-studio/explode-the-web/blob/master/screenshots/exploded-cnn-440x280.png "Exploded CNN")
+![Exploded CNN](screenshots/exploded-cnn-440x280.png "Exploded CNN")
 
 
 
