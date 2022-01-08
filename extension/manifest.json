@@ -38,8 +38,7 @@
         "run_at": "document_end"
     }],
 	"permissions": [
-        "*://*/*",
-        "management"
+        
     ],
     "web_accessible_resources": ["*.svg","*.mp3"]
 }

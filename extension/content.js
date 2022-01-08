@@ -58,7 +58,7 @@ if (trackersFound.length >= trackersFoundLimit) {
     var interval = setInterval(updateTimer, 1000);
     // add explosion image
     $('.explode-counter').css({
-        "background": "url(" + chrome.extension.getURL("assets/img/explode-ui.svg") + ")",
+        "background": "url(" + chrome.runtime.getURL("assets/img/explode-ui.svg") + ")",
         "cursor": "pointer"
     });
     // add click listener if user wants to cancel
