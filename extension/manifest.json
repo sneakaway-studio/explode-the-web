@@ -1,7 +1,7 @@
 {
     "name": "Explode the Web!",
     "description": "Explode web pages that contain data trackers!",
-    "version": "1.2.1",
+    "version": "1.2.2",
     "manifest_version": 2,
     "icons": {
 		"16": "assets/img/explode-icon16.png",
@@ -23,8 +23,8 @@
     "content_scripts": [{
         "matches": ["<all_urls>"],
         "js": [
-            "assets/libs/jquery-3.5.1.min.js",
-            "assets/libs/anime.min.js",
+            "assets/libs/anime.min-3.2.0.js",
+            "assets/libs/jquery-3.6.0.min.js",
             "assets/libs/purify-2.3.4.js",
             "assets/js/disconnect-tracking-services.js",
             "assets/js/functions.js",
