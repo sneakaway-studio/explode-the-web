@@ -69,7 +69,7 @@ Read the article and tutorial: [Browser Blowup: Explode Web Pages Containing Thi
 
 ## Privacy Policy
 
-This extension uses analytics to improve functionality. It does not collect any personally identifiable information (PII).
+This extension does not collect any personally identifiable information (PII).
 
 
 ## Credits

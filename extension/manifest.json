@@ -25,7 +25,6 @@
         "js": [
             "assets/libs/jquery-3.5.1.min.js",
             "assets/libs/anime.min.js",
-            "assets/js/analytics.js",
             "assets/js/disconnect-tracking-services.js",
             "assets/js/functions.js",
             "assets/js/keys.js",
