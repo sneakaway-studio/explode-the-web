@@ -1,6 +1,6 @@
 <!-- paginate: true -->
 
-# <img width="4%" src="../../extension/assets/img/explode-ui.svg"> 2-Archicture and debugging
+# <img width="4%" src="../../extension/explode-tutorial-final/assets/img/explosion-tutorial-icon.svg"> 2-Archicture and debugging
 
 <span class="slides-small"><a href="../slides/2-architecture.html">slides</a> | <span class="slides-small"><a href="../markdown/2-architecture.md">markdown</a> | <a href="../www/2-architecture.html">HTML</a></span>
 
@@ -25,8 +25,8 @@ Presentation comments ...
 ## 👉 Create the project architecture
 
 - In this section we will add several files to create the archicture for the extension.
-- Our project folder "explode-tutorial" is where we'll add files to build the extension. Files added directly to this folder like "explode-tutorial/manifest.json" are said to be in the "root" of the project folder.
-- You can find completed files for each section in the `tutorial/versions/` folder.
+- Let's start with assets you'll need.
+
 
 Adding a "test page" makes it easy to test our project as we build onto it.
 
@@ -47,7 +47,7 @@ Adding a "test page" makes it easy to test our project as we build onto it.
 
 <div class="slides-small caption">The previous HTML example showed CSS and JS in separate files. For simplicity, this test page keeps them in a single document.</div>
 
-
+<div class="slides-small caption">Our project folder "explode-tutorial" is where we'll add files to build the extension. Files added directly to this folder like "explode-tutorial/manifest.json" are said to be in the "root" of the project folder.</div>
 
 
 

@@ -1,6 +1,6 @@
 <!-- paginate: true -->
 
-# <img width="4%" src="../../extension/assets/img/explode-ui.svg"> Explode the Web!
+# <img width="4%" src="../../extension/explode-tutorial-final/assets/img/explosion-tutorial-icon.svg"> Explode the Web!
 
 Make a browser extension to destroy web pages that steal your data.
 

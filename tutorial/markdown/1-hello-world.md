@@ -1,6 +1,6 @@
 <!-- paginate: true -->
 
-# <img width="4%" src="../../extension/assets/img/explode-ui.svg"> 1- Hello World!
+# <img width="4%" src="../../extension/explode-tutorial-final/assets/img/explosion-tutorial-icon.svg"> 1- Hello World!
 
 <span class="slides-small"><a href="../slides/1-hello-world.html">slides</a> | <span class="slides-small"><a href="../markdown/1-hello-world.md">markdown</a> | <a href="../www/1-hello-world.html">HTML</a></span>
 
@@ -201,4 +201,5 @@ These are basic steps you repeat will to build and test any extension. Try updat
 ## Part 1 conclusion
 
 - So far we have created a project folder and manifest, and learned how to load, update, and refresh the extension in Chrome.
+- You check your progress by looking at the completed files for each section, for example in `extensions/explode-tutorial-1`.
 - 👉 Start the next section [Architecture and Debugging](2-architecture.html)
