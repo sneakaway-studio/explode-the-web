@@ -12,9 +12,22 @@ Originally published as a chapter the tutorial has now been updated and improved
 
 
 
+### Browser Blowup Tutorial
+
+- 0-Introduction [slides](tutorial/slides/0-introduction.html)
+- 1-Hello world! [slides](tutorial/slides/1-hello-world.html)
+- 2-Architecture and debugging [slides](tutorial/slides/2-archicture.html)
+- 3-Working with the DOM [slides](tutorial/slides/3-dom.html)
+- 4-Create the explosion [slides](tutorial/slides/4-explosion.html)
+- 5-Publishing [slides](tutorial/slides/5-publishing.html)
+
+
+
+
+
 ### Privacy Policy
 
-This extension does not collect any personally identifiable information (PII).
+This extension does not collect data.
 
 
 ### Credits

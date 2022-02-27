@@ -34,6 +34,7 @@
 
 <h1 id="-1--hello-world"><img width="4%" src="../../extension/assets/img/explode-ui.svg"> 1- Hello World!</h1>
 <p><span class="slides-small"><a href="../slides/1-hello-world.html">slides</a> | <span class="slides-small"><a href="../markdown/1-hello-world.md">markdown</a> | <a href="../www/1-hello-world.html">HTML</a></span></p>
+<p><span class="slides-small"><a href="../../README.md">⌂</a> | <a href="0-introduction.html">0-Introduction</a> | <a href="1-hello-world.html">1-Hello World!</a> | <a href="2-architecture.html">2-Architecture</a> | <a href="3-dom.html">3-DOM</a> | <a href="4-explosion.html">4-Explosion</a> | <a href="5-publishing.html">5-Publishing</a></span></p>
 <!--
 Presentation comments ...
 -->
@@ -43,8 +44,7 @@ Presentation comments ...
 <li>Create manifest.json</li>
 <li>Load an extension</li>
 <li>Edit and refresh an extension</li>
-<li>Content Scripts</li>
-<li>Debug an extension</li>
+<li>Next steps</li>
 </ol>
 <hr>
 <h2 id="html-css-javascript">HTML, CSS, Javascript</h2>
@@ -70,7 +70,7 @@ Presentation comments ...
 &lt;link rel=&quot;stylesheet&quot; href=&quot;styles.css&quot;&gt;
 &lt;body&gt;
 &lt;h1&gt;Hello world!&lt;/h1&gt;
-&lt;p&gt;This is a paragraph&lt;/p&gt;
+&lt;p&gt;This is a &lt;span style=&quot;color:red&quot;&gt;paragraph&lt;/span&gt;&lt;/p&gt;
 &lt;script src=&quot;main.js&quot;&gt;&lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;
@@ -93,12 +93,19 @@ alert(&quot;This is a simple Javascript alert&quot;);
 
 <hr>
 <h2 id="👉-create-the-manifest-file">👉 Create the manifest file</h2>
-<p>The <code>manifest.json</code> file tells the browser how to install and run the extension code.</p>
+<p>The <a target="_blank" href="https://developer.chrome.com/docs/extensions/mv3/manifest/">manifest file</a> tells the browser how to install and run the extension code.</p>
+<div class="twocolumn">
+<div class="col">
+
 <ol>
-<li>Create a new folder for your extension files and name it <code>explode-extension</code></li>
-<li>Create a new file named <code>manifest.json</code> inside the folder and paste the example.</li>
+<li>Create a new folder and call it <code>explode-tutorial</code></li>
+<li>Create a new file <code>manifest.json</code> inside this folder.</li>
+<li>Paste or type the example.</li>
 <li>Install the extension in your browser using the instructions below.</li>
 </ol>
+</div>
+<div class="col">
+
 <pre><code class="language-json">{
     &quot;name&quot;: &quot;My First Browser Extension&quot;,
     &quot;description&quot;: &quot;🐌&quot;,
@@ -106,12 +113,21 @@ alert(&quot;This is a simple Javascript alert&quot;);
     &quot;manifest_version&quot;: 3
 }
 </code></pre>
+<div class="slides-small caption">We are using Manifest version 3, which is now required for all new published extensions.</div>
+
+</div>
+</div>
+
+
+
+
+
 <hr>
 <h2 id="👉-install-an-extension-for-development">👉 Install an extension for development</h2>
 <div class="twocolumn">
 <div class="col">
 
-<h4 id="chromium-browsers">Chromium Browsers*</h4>
+<h4 id="chromium-browsers">Chromium Browsers</h4>
 <ol>
 <li>Go to <code>chrome://extensions</code></li>
 <li>Enable Developer mode by toggling the checkbox in the upper-right corner.</li>
@@ -130,7 +146,7 @@ alert(&quot;This is a simple Javascript alert&quot;);
 </div>
 </div>
 
-<div class="slides-small caption">* We are building a "cross-browser extension" so, from this point instructions refer to Chromium browsers (Chrome, Brave, Opera, Edge, <a target="_blank" href="https://en.wikipedia.org/wiki/Chromium_(web_browser)#Browsers_based_on_Chromium">and others</a>), it will work fine in <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">Firefox</a>.</div>
+<div class="slides-small caption">We are building a "cross-browser extension" so, from this point instructions refer to Chromium browsers (Chrome, Brave, Opera, Edge, <a target="_blank" href="https://en.wikipedia.org/wiki/Chromium_(web_browser)#Browsers_based_on_Chromium">and others</a>), but it will work fine in <a target="_blank" href="https://developer.chrome.com/docs/extensions/mv3/getstarted/">Chrome</a> or <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">Firefox</a>.</div>
 
 
 
@@ -148,9 +164,9 @@ alert(&quot;This is a simple Javascript alert&quot;);
 </div>
 <div class="col">
 
-<img width="475" src="../figures/tutorial-2022/1-1-installed.png">
+<img width="550" src="../figures/tutorial-2022/1-1-installed.png">
 
-<div class="slides-small caption">Note that, "unpacked" simply means the folder and files have not yet been zipped to upload and distribute on Chrome or Firefox platforms.</div>
+<div class="slides-small caption">Note that, "unpacked" simply means the folder and files have not yet been zipped to upload and distribute on Chrome or Firefox platforms. You can recognize unpacked extensions by the orange "hard drive" icon.</div>
 
 </div>
 </div>
@@ -159,26 +175,16 @@ alert(&quot;This is a simple Javascript alert&quot;);
 
 
 
-
-
-<hr>
-<h2 id="about-the-tutorial">About the tutorial</h2>
-<p>A few things to notice about this tutorial:</p>
-<ul>
-<li>The 👉 emoji lets you know there are steps to complete.</li>
-<li>You can find the finished extension files for each section of this tutorial in <code>tutorial/versions/</code> folder.</li>
-<li>We are using Manifest version 3, which is now required for all new published extensions.</li>
-</ul>
 <hr>
 <h2 id="👉-edit-and-refresh-an-extension">👉 Edit and refresh an extension</h2>
-<p>These are the steps you will repeat to build and test an extension:</p>
+<p>These are basic steps you repeat will to build and test any extension. Try updating your manifest to match the example.</p>
 <div class="twocolumn">
 <div class="col">
 
 <ol>
 <li>Edit and save the extension files in your code editor.</li>
-<li>At <code>chrome://extensions</code> in your browser, click the small &quot;refresh&quot; button to reload extension.</li>
-<li>Refresh a test page to run the extension on that page.</li>
+<li>Click the small &quot;refresh&quot; button at <code>chrome://extensions</code> to reload the extension.</li>
+<li>Normally you&#39;ll refresh a test page to run the extension on that page. Let&#39;s add one now.</li>
 </ol>
 </div>
 <div class="col">
@@ -190,35 +196,21 @@ alert(&quot;This is a simple Javascript alert&quot;);
     &quot;manifest_version&quot;: 3
 }
 </code></pre>
+<div class="slides-small caption">You may have probably aleady noticed that the 👉 emoji lets you know there are steps to complete.</div>
+
 </div>
 </div>
-
-
-
 
 
 
 
 
 <hr>
-<h2 id="how-to-debug-an-extension">How to debug an extension</h2>
-<ol>
-<li>Perhaps the most important thing besides proof your project is &quot;working&quot; is to be able to determine and debug when it is <em>not working</em>.</li>
-</ol>
-<hr>
-<h2 id="template">TEMPLATE</h2>
-<div class="twocolumn">
-<div class="col">
-
-
-
-</div>
-<div class="col">
-
-
-
-</div>
-</div>
+<h2 id="part-1-conclusion">Part 1 conclusion</h2>
+<ul>
+<li>So far we have created a project folder and manifest, and learned how to load, update, and refresh the extension in Chrome.</li>
+<li>👉 Start the next section <a href="2-architecture.html">Architecture and Debugging</a></li>
+</ul>
 
         </div>
     </div>

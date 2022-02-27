@@ -4,6 +4,8 @@
 
 <span class="slides-small"><a href="../slides/1-hello-world.html">slides</a> | <span class="slides-small"><a href="../markdown/1-hello-world.md">markdown</a> | <a href="../www/1-hello-world.html">HTML</a></span>
 
+<span class="slides-small">[⌂](../../README.md) | [0-Introduction](0-introduction.html) | [1-Hello World!](1-hello-world.html) | [2-Architecture](2-architecture.html) | [3-DOM](3-dom.html) | [4-Explosion](4-explosion.html) | [5-Publishing](5-publishing.html)</span>
+
 <!--
 Presentation comments ...
 -->
@@ -12,8 +14,7 @@ Presentation comments ...
 1. Create manifest.json
 1. Load an extension
 1. Edit and refresh an extension
-1. Content Scripts
-1. Debug an extension
+1. Next steps
 
 
 
@@ -43,7 +44,7 @@ Presentation comments ...
 <link rel="stylesheet" href="styles.css">
 <body>
 <h1>Hello world!</h1>
-<p>This is a paragraph</p>
+<p>This is a <span style="color:red">paragraph</span></p>
 <script src="main.js"></script>
 </body>
 </html>
@@ -73,11 +74,18 @@ alert("This is a simple Javascript alert");
 
 ## 👉 Create the manifest file
 
-The `manifest.json` file tells the browser how to install and run the extension code.
+The <a target="_blank" href="https://developer.chrome.com/docs/extensions/mv3/manifest/">manifest file</a> tells the browser how to install and run the extension code.
 
-1. Create a new folder for your extension files and name it `explode-extension`
-1. Create a new file named `manifest.json` inside the folder and paste the example.
+<div class="twocolumn">
+<div class="col">
+
+1. Create a new folder and call it `explode-tutorial`
+1. Create a new file `manifest.json` inside this folder.
+1. Paste or type the example.
 1. Install the extension in your browser using the instructions below.
+
+</div>
+<div class="col">
 
 ```json
 {
@@ -88,6 +96,10 @@ The `manifest.json` file tells the browser how to install and run the extension 
 }
 ```
 
+<div class="slides-small caption">We are using Manifest version 3, which is now required for all new published extensions.</div>
+
+</div>
+</div>
 
 
 
@@ -101,7 +113,7 @@ The `manifest.json` file tells the browser how to install and run the extension 
 <div class="twocolumn">
 <div class="col">
 
-#### Chromium Browsers*
+#### Chromium Browsers
 
 1. Go to `chrome://extensions`
 1. Enable Developer mode by toggling the checkbox in the upper-right corner.
@@ -117,11 +129,10 @@ The `manifest.json` file tells the browser how to install and run the extension 
 1. Click "Load Temporary Add-on" and select any file in your extension folder.
 1. The extension will remain installed until you restart Firefox.
 
-
 </div>
 </div>
 
-<div class="slides-small caption">* We are building a "cross-browser extension" so, from this point instructions refer to Chromium browsers (Chrome, Brave, Opera, Edge, <a target="_blank" href="https://en.wikipedia.org/wiki/Chromium_(web_browser)#Browsers_based_on_Chromium">and others</a>), it will work fine in <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">Firefox</a>.</div>
+<div class="slides-small caption">We are building a "cross-browser extension" so, from this point instructions refer to Chromium browsers (Chrome, Brave, Opera, Edge, <a target="_blank" href="https://en.wikipedia.org/wiki/Chromium_(web_browser)#Browsers_based_on_Chromium">and others</a>), but it will work fine in <a target="_blank" href="https://developer.chrome.com/docs/extensions/mv3/getstarted/">Chrome</a> or <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">Firefox</a>.</div>
 
 
 
@@ -140,28 +151,12 @@ The `manifest.json` file tells the browser how to install and run the extension 
 </div>
 <div class="col">
 
-<img width="475" src="../figures/tutorial-2022/1-1-installed.png">
+<img width="550" src="../figures/tutorial-2022/1-1-installed.png">
 
-<div class="slides-small caption">Note that, "unpacked" simply means the folder and files have not yet been zipped to upload and distribute on Chrome or Firefox platforms.</div>
+<div class="slides-small caption">Note that, "unpacked" simply means the folder and files have not yet been zipped to upload and distribute on Chrome or Firefox platforms. You can recognize unpacked extensions by the orange "hard drive" icon.</div>
 
 </div>
 </div>
-
-
-
-
-
-
-
----
-
-## About the tutorial
-
-A few things to notice about this tutorial:
-
-- The 👉 emoji lets you know there are steps to complete.
-- You can find the finished extension files for each section of this tutorial in `tutorial/versions/` folder.
-- We are using Manifest version 3, which is now required for all new published extensions.
 
 
 
@@ -171,14 +166,14 @@ A few things to notice about this tutorial:
 
 ## 👉 Edit and refresh an extension
 
-These are the steps you will repeat to build and test an extension:
+These are basic steps you repeat will to build and test any extension. Try updating your manifest to match the example.
 
 <div class="twocolumn">
 <div class="col">
 
 1. Edit and save the extension files in your code editor.
-1. At `chrome://extensions` in your browser, click the small "refresh" button to reload extension.
-1. Refresh a test page to run the extension on that page.
+1. Click the small "refresh" button at `chrome://extensions` to reload the extension.
+1. Normally you'll refresh a test page to run the extension on that page. Let's add one now.
 
 </div>
 <div class="col">
@@ -192,11 +187,10 @@ These are the steps you will repeat to build and test an extension:
 }
 ```
 
+<div class="slides-small caption">You may have probably aleady noticed that the 👉 emoji lets you know there are steps to complete.</div>
+
 </div>
 </div>
-
-
-
 
 
 
@@ -204,30 +198,7 @@ These are the steps you will repeat to build and test an extension:
 
 ---
 
-## How to debug an extension
+## Part 1 conclusion
 
-
-1. Perhaps the most important thing besides proof your project is "working" is to be able to determine and debug when it is *not working*.
-
-
-
-
-
-
-
----
-
-## TEMPLATE
-
-<div class="twocolumn">
-<div class="col">
-
-
-
-</div>
-<div class="col">
-
-
-
-</div>
-</div>
+- So far we have created a project folder and manifest, and learned how to load, update, and refresh the extension in Chrome.
+- 👉 Start the next section [Architecture and Debugging](2-architecture.html)

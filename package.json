@@ -1,22 +1,25 @@
 {
     "name": "explode-the-web",
     "version": "1.0.0",
-    "description": "Basic, intermediate, and advanced computing lesson modules",
-    "main": "index.js",
+    "description": "Originally published as a chapter the tutorial has now been updated and improved:",
+    "main": "Gruntfile.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/omundy/lexplode-the-web.git"
+        "url": "git+https://github.com/sneakaway-studio/explode-the-web.git"
     },
     "author": "Owen Mundy",
     "title": "Explode the Web!",
     "license": "Attribution-NonCommercial 4.0 International",
+
+
     "bugs": {
-        "url": "https://github.com/omundy/learn-computing/issues"
+        "url": "https://github.com/sneakaway-studio/explode-the-web/issues"
     },
-    "homepage": "https://github.com/omundy/learn-computing#readme",
+    "homepage": "https://github.com/sneakaway-studio/explode-the-web#readme",
+
     "marp": {
         "author": "Owen Mundy",
         "title": "Explode the Web!",
@@ -36,7 +39,7 @@
         "minifyCSS": false,
         "script": {
             "source": [
-                "assets/js/"
+                "tutorial/assets/js/"
             ]
         }
     },

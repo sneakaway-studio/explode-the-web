@@ -6,6 +6,30 @@
 
 
 
+
+Tracker blockers work by accessing the source code of a web page,
+identifying content areas that are known to import third-party trackers or show
+advertisements, and deleting that source code. Tis is possible because we can view the
+content of web pages using the browser’s “view source” option. Te view source option has
+been available almost as long as web browsers have been in use and is an essential part of
+what makes the internet “open.” With it, anyone can see how a web page is constructed, to
+inspect or learn from others’ code, and improve the web. As Stack Overfow co-founder
+Jef Atwood explained on his popular blog Coding Horror, it is the “ultimate form of open
+source” and an important reason for why the internet is so accessible today6
+.
+6
+Mark
+Surman, the Executive Director of the Mozilla Foundation, argues for “view source” not
+only as pragmatic, but instead, as fundamental to the transparency, openness, and
+collaborative goals that underpin all of civil society7
+.
+7
+
+
+
+
+
+
 ---
 
 

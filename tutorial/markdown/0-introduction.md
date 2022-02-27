@@ -6,23 +6,12 @@ Make a browser extension to destroy web pages that steal your data.
 
 <span class="slides-small"><a href="../slides/0-introduction.html">slides</a> | <span class="slides-small"><a href="../markdown/0-introduction.md">markdown</a> | <a href="../www/0-introduction.html">HTML</a></span>
 
+<span class="slides-small">[⌂](../../README.md) | [0-Introduction](0-introduction.html) | [1-Hello World!](1-hello-world.html) | [2-Architecture](2-architecture.html) | [3-DOM](3-dom.html) | [4-Explosion](4-explosion.html) | [5-Publishing](5-publishing.html)</span>
+
 <!--
 Presentation comments ...
 -->
 
-
-
-
----
-
-## What you will learn
-
-After this presentation you'll be able to:
-
-1. Explain how browser extensions are used
-1. Create a basic "hello world" example, and learn to debug extensions
-1. How to work the DOM and add a Javascript library
-1. Complete an extension to explode web pages with hidden data trackers.
 
 
 
@@ -91,9 +80,13 @@ After this presentation you'll be able to:
 
 ---
 
-## Building cross-browser extensions
+## What you will learn
 
+After this presentation you'll be able to:
 
-In this tutorial
+1. Explain how browser extensions are used
+1. Create a basic "hello world" example, and learn to debug extensions
+1. Access and change content of web pages using the DOM and Javascript libraries
+1. Complete an extension to explode web pages with hidden data trackers.
 
-we'll start by setting up a basic "hello world" example
+👉 Start the next section [Hello World!](1-hello-world.html)
