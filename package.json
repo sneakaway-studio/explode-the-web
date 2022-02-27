@@ -1,0 +1,50 @@
+{
+    "name": "explode-the-web",
+    "version": "1.0.0",
+    "description": "Basic, intermediate, and advanced computing lesson modules",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/omundy/lexplode-the-web.git"
+    },
+    "author": "Owen Mundy",
+    "title": "Explode the Web!",
+    "license": "Attribution-NonCommercial 4.0 International",
+    "bugs": {
+        "url": "https://github.com/omundy/learn-computing/issues"
+    },
+    "homepage": "https://github.com/omundy/learn-computing#readme",
+    "marp": {
+        "author": "Owen Mundy",
+        "title": "Explode the Web!",
+        "keywords": "computing, proficiency, browser extensions",
+        "allowLocalFiles": true,
+        "html": true,
+        "inputDir": "tutorial/markdown",
+        "output": "tutorial/slides",
+        "watch": false,
+        "bespoke": {
+            "progress": true
+        },
+        "theme": "owen",
+        "themeSet": [
+            "tutorial/assets/css/slide-styles.css"
+        ],
+        "minifyCSS": false,
+        "script": {
+            "source": [
+                "assets/js/"
+            ]
+        }
+    },
+    "devDependencies": {
+        "grunt": "^1.4.1",
+        "grunt-contrib-jshint": "^3.1.1",
+        "grunt-contrib-watch": "^1.1.0",
+        "grunt-md2html": "^0.6.0",
+        "grunt-shell": "^3.0.1"
+    }
+}

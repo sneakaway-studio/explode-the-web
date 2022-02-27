@@ -6,7 +6,7 @@ Originally published as a chapter the tutorial has now been updated and improved
 
 - Install this browser extension ([Chrome](https://chrome.google.com/webstore/detail/explode-the-web/dmedbnfdhjfppcgbccpfaigicbnajhod) or [Firefox](https://addons.mozilla.org/addon/explode-the-web/)) to explode web pages with third party trackers.
 - Read [Browser Blowup: Explode Web Pages Containing Third-Party Trackers](https://owenmundy.com/_site/content/_info/writing/sc_cookbook_2_browser_blowup.pdf) (2019).
-- Follow the new tutorial to learn how to build your own browser extension.
+- Follow the [new tutorial](tutorial/slides/0-introduction.html) to learn how to build your own browser extension.
 
 <img width=600 src="documentation/2018-explosions-cnn/exploded-cnn-1280x800.png">
 

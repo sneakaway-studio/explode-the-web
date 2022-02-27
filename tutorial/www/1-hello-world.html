@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+    
+    
+    
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Explode the Web! - markdown/1-hello-world</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/icons/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/icons/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/icons/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="../assets/img/icons/favicon_io/site.webmanifest">
+    <!-- <link rel="shortcut icon" type="image/x-icon" href="../assets/img/icons/favicon_io/favicon.ico"> -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/atom-one-dark.min.css">
+    <link rel="stylesheet" href="../assets/css/www-styles.css">
+
+</head>
+
+<body>
+
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-md-10 offset-md-1">
+            <!-- paginate: true -->
+
+<h1 id="-1--hello-world"><img width="4%" src="../../extension/assets/img/explode-ui.svg"> 1- Hello World!</h1>
+<p><span class="slides-small"><a href="../slides/1-hello-world.html">slides</a> | <span class="slides-small"><a href="../markdown/1-hello-world.md">markdown</a> | <a href="../www/1-hello-world.html">HTML</a></span></p>
+<!--
+Presentation comments ...
+-->
+
+<ol>
+<li>HTML, CSS, and Javascript</li>
+<li>Create manifest.json</li>
+<li>Load an extension</li>
+<li>Edit and refresh an extension</li>
+<li>Content Scripts</li>
+<li>Debug an extension</li>
+</ol>
+<hr>
+<h2 id="html-css-javascript">HTML, CSS, Javascript</h2>
+<div class="twocolumn">
+<div class="col">
+
+<ul>
+<li>Like all web pages, extensions are built using HTML, CSS, and Javascript code.</li>
+<li><a href="https://www.w3schools.com/html/default.asp">HTML</a> (HyperText Markup Language) structures content for the web.</li>
+<li><a href="https://www.w3schools.com/css/default.asp">CSS</a> (Cascading StyleSheets) control the presentation of content.</li>
+<li><a href="https://www.w3schools.com/js/default.asp">JS</a> (Javascript) is the programming language for web pages.</li>
+<li>This simple example will look like:<blockquote>
+<p>This is a <span style="color:red">paragraph</span></p></blockquote>
+</li>
+</ul>
+</div>
+<div class="col">
+
+<pre><code class="language-html">&lt;!-- hello.html --&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Hello world!&lt;/title&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;styles.css&quot;&gt;
+&lt;body&gt;
+&lt;h1&gt;Hello world!&lt;/h1&gt;
+&lt;p&gt;This is a paragraph&lt;/p&gt;
+&lt;script src=&quot;main.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<pre><code class="language-css">/* styles.css */
+span { color: red; }
+</code></pre>
+<pre><code class="language-js">// main.js
+alert(&quot;This is a simple Javascript alert&quot;);
+</code></pre>
+</div>
+</div>
+
+
+
+
+
+
+
+
+<hr>
+<h2 id="👉-create-the-manifest-file">👉 Create the manifest file</h2>
+<p>The <code>manifest.json</code> file tells the browser how to install and run the extension code.</p>
+<ol>
+<li>Create a new folder for your extension files and name it <code>explode-extension</code></li>
+<li>Create a new file named <code>manifest.json</code> inside the folder and paste the example.</li>
+<li>Install the extension in your browser using the instructions below.</li>
+</ol>
+<pre><code class="language-json">{
+    &quot;name&quot;: &quot;My First Browser Extension&quot;,
+    &quot;description&quot;: &quot;🐌&quot;,
+    &quot;version&quot;: &quot;1.0&quot;,
+    &quot;manifest_version&quot;: 3
+}
+</code></pre>
+<hr>
+<h2 id="👉-install-an-extension-for-development">👉 Install an extension for development</h2>
+<div class="twocolumn">
+<div class="col">
+
+<h4 id="chromium-browsers">Chromium Browsers*</h4>
+<ol>
+<li>Go to <code>chrome://extensions</code></li>
+<li>Enable Developer mode by toggling the checkbox in the upper-right corner.</li>
+<li>Click &quot;Load unpacked&quot; and select the folder with your extension manifest file.</li>
+</ol>
+</div>
+<div class="col">
+
+<h4 id="mozilla-firefox"><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension#installing">Mozilla Firefox</a></h4>
+<ol>
+<li>Go to <code>about:debugging</code>.</li>
+<li>Click &quot;This Firefox&quot;.</li>
+<li>Click &quot;Load Temporary Add-on&quot; and select any file in your extension folder.</li>
+<li>The extension will remain installed until you restart Firefox.</li>
+</ol>
+</div>
+</div>
+
+<div class="slides-small caption">* We are building a "cross-browser extension" so, from this point instructions refer to Chromium browsers (Chrome, Brave, Opera, Edge, <a target="_blank" href="https://en.wikipedia.org/wiki/Chromium_(web_browser)#Browsers_based_on_Chromium">and others</a>), it will work fine in <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">Firefox</a>.</div>
+
+
+
+
+<hr>
+<h2 id="👉-confirm-the-extension-has-loaded">👉 Confirm the extension has loaded</h2>
+<div class="twocolumn">
+<div class="col">
+
+<ol>
+<li>Confirm your extension has loaded at <code>chrome://extensions</code></li>
+<li>Examine the panel for your extension to see the name, description, and version from your manifest file.</li>
+<li>Notice also the enable|disable toggle and reload button.</li>
+</ol>
+</div>
+<div class="col">
+
+<img width="475" src="../figures/tutorial-2022/1-1-installed.png">
+
+<div class="slides-small caption">Note that, "unpacked" simply means the folder and files have not yet been zipped to upload and distribute on Chrome or Firefox platforms.</div>
+
+</div>
+</div>
+
+
+
+
+
+
+
+<hr>
+<h2 id="about-the-tutorial">About the tutorial</h2>
+<p>A few things to notice about this tutorial:</p>
+<ul>
+<li>The 👉 emoji lets you know there are steps to complete.</li>
+<li>You can find the finished extension files for each section of this tutorial in <code>tutorial/versions/</code> folder.</li>
+<li>We are using Manifest version 3, which is now required for all new published extensions.</li>
+</ul>
+<hr>
+<h2 id="👉-edit-and-refresh-an-extension">👉 Edit and refresh an extension</h2>
+<p>These are the steps you will repeat to build and test an extension:</p>
+<div class="twocolumn">
+<div class="col">
+
+<ol>
+<li>Edit and save the extension files in your code editor.</li>
+<li>At <code>chrome://extensions</code> in your browser, click the small &quot;refresh&quot; button to reload extension.</li>
+<li>Refresh a test page to run the extension on that page.</li>
+</ol>
+</div>
+<div class="col">
+
+<pre><code class="language-json">{
+    &quot;name&quot;: &quot;Explode the Web! Tutorial&quot;,
+    &quot;description&quot;: &quot;🐢&quot;,
+    &quot;version&quot;: &quot;1.1&quot;,
+    &quot;manifest_version&quot;: 3
+}
+</code></pre>
+</div>
+</div>
+
+
+
+
+
+
+
+
+<hr>
+<h2 id="how-to-debug-an-extension">How to debug an extension</h2>
+<ol>
+<li>Perhaps the most important thing besides proof your project is &quot;working&quot; is to be able to determine and debug when it is <em>not working</em>.</li>
+</ol>
+<hr>
+<h2 id="template">TEMPLATE</h2>
+<div class="twocolumn">
+<div class="col">
+
+
+
+</div>
+<div class="col">
+
+
+
+</div>
+</div>
+
+        </div>
+    </div>
+</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
+</body>
+</html>
