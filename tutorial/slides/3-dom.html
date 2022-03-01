@@ -17,38 +17,91 @@
 /* Create two col layout */div#p>svg>foreignObject>section .twocolumn{display:grid;grid-template-columns:1fr 1fr;grid-gap:20px;text-align:left}
 
 /* Adds "Page" prefix and total page number
-local pagination directive still required */div#p>svg>foreignObject>section:after{font-size:calc(var(--marpit-root-font-size, 1rem) * .9)!important;content:attr(data-marpit-pagination) ' / 'attr(data-marpit-pagination-total)}div#p>svg>foreignObject>section:after{--marpit-root-font-size:calc(var(--marpit-root-font-size, 1rem) * .9)!important}div#p>svg>foreignObject>section .back-icon{margin-top:20px}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]{columns:initial!important;display:block!important;padding:0!important}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]:after,div#p>svg>foreignObject>section[data-marpit-advanced-background=background]:before,div#p>svg>foreignObject>section[data-marpit-advanced-background=content]:after,div#p>svg>foreignObject>section[data-marpit-advanced-background=content]:before{display:none!important}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container]{all:initial;display:flex;flex-direction:row;height:100%;overflow:hidden;width:100%}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container][data-marpit-advanced-background-direction=vertical]{flex-direction:column}div#p>svg>foreignObject>section[data-marpit-advanced-background=background][data-marpit-advanced-background-split]>div[data-marpit-advanced-background-container]{width:var(--marpit-advanced-background-split,50%)}div#p>svg>foreignObject>section[data-marpit-advanced-background=background][data-marpit-advanced-background-split=right]>div[data-marpit-advanced-background-container]{margin-left:calc(100% - var(--marpit-advanced-background-split, 50%))}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container]>figure{all:initial;background-position:center;background-repeat:no-repeat;background-size:cover;flex:auto;margin:0}div#p>svg>foreignObject>section[data-marpit-advanced-background=content],div#p>svg>foreignObject>section[data-marpit-advanced-background=pseudo]{background:transparent!important}div#p>svg>foreignObject>section[data-marpit-advanced-background=pseudo],div#p>svg[data-marpit-svg]>foreignObject[data-marpit-advanced-background=pseudo]{pointer-events:none!important}div#p>svg>foreignObject>section[data-marpit-advanced-background-split]{width:100%;height:100%}</style></head><body><div class="bespoke-progress-parent"><div class="bespoke-progress-bar"></div></div><div class="bespoke-marp-osc"><button data-bespoke-marp-osc="prev" tabindex="-1" title="Previous slide">Previous slide</button><span data-bespoke-marp-osc="page"></span><button data-bespoke-marp-osc="next" tabindex="-1" title="Next slide">Next slide</button><button data-bespoke-marp-osc="fullscreen" tabindex="-1" title="Toggle fullscreen (f)">Toggle fullscreen</button><button data-bespoke-marp-osc="presenter" tabindex="-1" title="Open presenter view (p)">Open presenter view</button></div><div id="p"><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="1" data-paginate="true" data-theme="owen" data-marpit-pagination="1" data-marpit-pagination-total="5" style="--paginate:true;--theme:owen;">
+local pagination directive still required */div#p>svg>foreignObject>section:after{font-size:calc(var(--marpit-root-font-size, 1rem) * .9)!important;content:attr(data-marpit-pagination) ' / 'attr(data-marpit-pagination-total)}div#p>svg>foreignObject>section:after{--marpit-root-font-size:calc(var(--marpit-root-font-size, 1rem) * .9)!important}div#p>svg>foreignObject>section .back-icon{margin-top:20px}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]{columns:initial!important;display:block!important;padding:0!important}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]:after,div#p>svg>foreignObject>section[data-marpit-advanced-background=background]:before,div#p>svg>foreignObject>section[data-marpit-advanced-background=content]:after,div#p>svg>foreignObject>section[data-marpit-advanced-background=content]:before{display:none!important}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container]{all:initial;display:flex;flex-direction:row;height:100%;overflow:hidden;width:100%}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container][data-marpit-advanced-background-direction=vertical]{flex-direction:column}div#p>svg>foreignObject>section[data-marpit-advanced-background=background][data-marpit-advanced-background-split]>div[data-marpit-advanced-background-container]{width:var(--marpit-advanced-background-split,50%)}div#p>svg>foreignObject>section[data-marpit-advanced-background=background][data-marpit-advanced-background-split=right]>div[data-marpit-advanced-background-container]{margin-left:calc(100% - var(--marpit-advanced-background-split, 50%))}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container]>figure{all:initial;background-position:center;background-repeat:no-repeat;background-size:cover;flex:auto;margin:0}div#p>svg>foreignObject>section[data-marpit-advanced-background=content],div#p>svg>foreignObject>section[data-marpit-advanced-background=pseudo]{background:transparent!important}div#p>svg>foreignObject>section[data-marpit-advanced-background=pseudo],div#p>svg[data-marpit-svg]>foreignObject[data-marpit-advanced-background=pseudo]{pointer-events:none!important}div#p>svg>foreignObject>section[data-marpit-advanced-background-split]{width:100%;height:100%}</style></head><body><div class="bespoke-progress-parent"><div class="bespoke-progress-bar"></div></div><div class="bespoke-marp-osc"><button data-bespoke-marp-osc="prev" tabindex="-1" title="Previous slide">Previous slide</button><span data-bespoke-marp-osc="page"></span><button data-bespoke-marp-osc="next" tabindex="-1" title="Next slide">Next slide</button><button data-bespoke-marp-osc="fullscreen" tabindex="-1" title="Toggle fullscreen (f)">Toggle fullscreen</button><button data-bespoke-marp-osc="presenter" tabindex="-1" title="Open presenter view (p)">Open presenter view</button></div><div id="p"><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="1" data-paginate="true" data-theme="owen" data-marpit-pagination="1" data-marpit-pagination-total="8" style="--paginate:true;--theme:owen;">
 <h1><img width="4%" src="../../extension/explode-tutorial-final/assets/img/explosion-tutorial-icon.svg" /> 3-DOM</h1>
 <p><span class="slides-small"><a href="../slides/3-dom.html">slides</a> | <span class="slides-small"><a href="../markdown/3-dom">markdown</a> | <a href="../www/3-dom.html">HTML</a></span></p>
 <p><span class="slides-small"><a href="../../README.md">⌂</a> | <a href="0-introduction.html">0-Introduction</a> | <a href="1-hello-world.html">1-Hello World!</a> | <a href="2-architecture.html">2-Architecture</a> | <a href="3-dom.html">3-DOM</a> | <a href="4-explosion.html">4-Explosion</a> | <a href="5-publishing.html">5-Publishing</a></span></p>
 
 <ol>
 <li>Download and add project assets</li>
-<li>Add a browser action</li>
+<li>Add a browser action and icons</li>
 <li>Check the trackers on the page</li>
 </ol>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="2" data-paginate="true" data-theme="owen" data-marpit-pagination="2" data-marpit-pagination-total="5" style="--paginate:true;--theme:owen;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="2" data-paginate="true" data-theme="owen" data-marpit-pagination="2" data-marpit-pagination-total="8" style="--paginate:true;--theme:owen;">
 <h2><img class="emoji" draggable="false" alt="👉" src="https://twemoji.maxcdn.com/2/svg/1f449.svg" data-marp-twemoji=""/> Get project assets</h2>
-<ul>
-<li>Let's get assets you'll need to continue the project.</li>
-</ul>
 <div class="twocolumn">
 <div class="col">
+<ol>
+<li>Download the <a href="https://github.com/sneakaway-studio/explode-the-web/tree/main/extension"><code>assets.zip</code></a> file you'll need to continue the tutorial.</li>
+<li>Unzip the folder and place it in your <code>explode-tutorial</code> project folder.</li>
+<li>Your structure should look like this &gt;</li>
+</ol>
 </div>
 <div class="col">
-<p>test.html</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>/explode-tutorial/
+    assets/
+        css/
+        img/
+        libs/
+        js/
+        pages/
+        sounds/
+    background.js
+    content.js
+    manifest.json
+</span></span></foreignObject></svg></code></pre>
 </div>
 </div>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="3" data-paginate="true" data-theme="owen" data-marpit-pagination="3" data-marpit-pagination-total="5" style="--paginate:true;--theme:owen;">
-<h2><img class="emoji" draggable="false" alt="👉" src="https://twemoji.maxcdn.com/2/svg/1f449.svg" data-marp-twemoji=""/> Add icons</h2>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="3" data-paginate="true" data-theme="owen" data-marpit-pagination="3" data-marpit-pagination-total="8" style="--paginate:true;--theme:owen;">
+<h2>Browser action</h2>
+<div class="twocolumn">
+<div class="col">
+<ul>
+<li>An <a href="https://developer.chrome.com/docs/extensions/reference/action/">action</a> adds an extension icon and popup window to the browser toolbar.</li>
+<li>The action is sometimes called &quot;browser action&quot;, or &quot;popup script&quot;.</li>
+<li>The action popup is an HTML page you define and has its own context (and its own DevTools console!).</li>
+</ul>
+</div>
+<div class="col">
+<img width="700" src="../figures/tutorial-2022/2-1-diagram-architecture.svg" />
+</div>
+</div>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="4" data-paginate="true" data-theme="owen" data-marpit-pagination="4" data-marpit-pagination-total="8" style="--paginate:true;--theme:owen;">
+<h2><img class="emoji" draggable="false" alt="👉" src="https://twemoji.maxcdn.com/2/svg/1f449.svg" data-marp-twemoji=""/> Add an action</h2>
+<div class="twocolumn">
+<div class="col">
+<ol>
+<li>Add a new file to the project folder called <code>action.html</code></li>
+<li>Paste in this code.</li>
+</ol>
+</div>
+<div class="col">
+<pre><code class="language-html"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;UTF-8&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;width:220px; text-align:center&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><img class="emoji" draggable="false" alt="💥" src="https://twemoji.maxcdn.com/2/svg/1f4a5.svg" data-marp-twemoji=""/> Explode Tracked Pages!<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Press e + ~ to test<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</span></span></foreignObject></svg></code></pre>
+</div>
+</div>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="5" data-paginate="true" data-theme="owen" data-marpit-pagination="5" data-marpit-pagination-total="8" style="--paginate:true;--theme:owen;">
+<h2><img class="emoji" draggable="false" alt="👉" src="https://twemoji.maxcdn.com/2/svg/1f449.svg" data-marp-twemoji=""/> Add the action and icons to the manifest</h2>
 <div class="twocolumn">
 <div class="col">
 <ul>
 <li>The icon identifies the browser extension in the <code>chrome://extensions</code> page.</li>
-<li>If you haven't already, download the assets for this tutorial at:</li>
-<li>Unzip the folder and place it in your <code>explode-tutorial</code> folder.</li>
+<li>Add this code to your manifest to add the icon and action and refresh the extension.</li>
 </ul>
 </div>
 <div class="col">
@@ -58,28 +111,70 @@ local pagination directive still required */div#p>svg>foreignObject>section:afte
     <span class="hljs-attr">&quot;64&quot;</span>: <span class="hljs-string">&quot;assets/img/explosion-icon64.png&quot;</span>,
     <span class="hljs-attr">&quot;128&quot;</span>: <span class="hljs-string">&quot;assets/img/explosion-icon128.png&quot;</span>
 },
-</span></span></foreignObject></svg></code></pre>
-</div>
-</div>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="4" data-paginate="true" data-theme="owen" data-marpit-pagination="4" data-marpit-pagination-total="5" style="--paginate:true;--theme:owen;">
-<h2><img class="emoji" draggable="false" alt="👉" src="https://twemoji.maxcdn.com/2/svg/1f449.svg" data-marp-twemoji=""/> Add an action</h2>
-<div class="twocolumn">
-<div class="col">
-<ul>
-<li>An <a href="https://developer.chrome.com/docs/extensions/reference/action/">action</a> adds an extension icon and popup window to the browser toolbar.</li>
-<li>The action was formerly called &quot;browser action&quot;, or &quot;popup script&quot;</li>
-</ul>
-</div>
-<div class="col">
-<pre><code class="language-json"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-string">&quot;background&quot;</span>: {
-    <span class="hljs-attr">&quot;service_worker&quot;</span>: <span class="hljs-string">&quot;background.js&quot;</span>
+
+<span class="hljs-string">&quot;action&quot;</span>: {
+    <span class="hljs-attr">&quot;default_icon&quot;</span>: {
+        <span class="hljs-attr">&quot;16&quot;</span>: <span class="hljs-string">&quot;assets/img/explosion-icon16.png&quot;</span>,
+        <span class="hljs-attr">&quot;32&quot;</span>: <span class="hljs-string">&quot;assets/img/explosion-icon32.png&quot;</span>
+    },
+    <span class="hljs-attr">&quot;default_title&quot;</span>: <span class="hljs-string">&quot;Explode Tracked Web Pages!&quot;</span>,
+    <span class="hljs-attr">&quot;default_popup&quot;</span>: <span class="hljs-string">&quot;action.html&quot;</span>
 },
 </span></span></foreignObject></svg></code></pre>
 </div>
 </div>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="5" data-paginate="true" data-theme="owen" data-marpit-pagination="5" data-marpit-pagination-total="5" style="--paginate:true;--theme:owen;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="6" data-paginate="true" data-theme="owen" data-marpit-pagination="6" data-marpit-pagination-total="8" style="--paginate:true;--theme:owen;">
+<h2><img class="emoji" draggable="false" alt="👉" src="https://twemoji.maxcdn.com/2/svg/1f449.svg" data-marp-twemoji=""/> Add libraries to manifest</h2>
+<div class="twocolumn">
+<div class="col">
+<ul>
+<li>Let's go ahead and reference the libraries we need in our manifest.</li>
+<li>Edit your <code>content_script</code> section to look like this, and add <code>web_accessible_resources</code> at the end.</li>
+<li>The full manifest can be referenced here if you prefer to copy and paste:</li>
+</ul>
+</div>
+<div class="col">
+<pre><code class="language-json"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-string">&quot;content_scripts&quot;</span>: [{
+    <span class="hljs-attr">&quot;matches&quot;</span>: [<span class="hljs-string">&quot;&lt;all_urls&gt;&quot;</span>],
+    <span class="hljs-attr">&quot;js&quot;</span>: [
+        <span class="hljs-string">&quot;assets/libs/anime.min-3.2.0.js&quot;</span>,
+        <span class="hljs-string">&quot;assets/libs/jquery-3.6.0.min.js&quot;</span>,
+        <span class="hljs-string">&quot;assets/libs/purify-2.3.4.js&quot;</span>,
+        <span class="hljs-string">&quot;assets/js/disconnect-tracking-services.js&quot;</span>,
+        <span class="hljs-string">&quot;assets/js/functions.js&quot;</span>,
+        <span class="hljs-string">&quot;assets/js/keys.js&quot;</span>,
+        <span class="hljs-string">&quot;assets/js/explode.js&quot;</span>,
+        <span class="hljs-string">&quot;content.js&quot;</span>
+    ],
+    <span class="hljs-attr">&quot;css&quot;</span>: [
+        <span class="hljs-string">&quot;assets/css/styles.css&quot;</span>
+    ],
+    <span class="hljs-attr">&quot;run_at&quot;</span>: <span class="hljs-string">&quot;document_end&quot;</span>,
+    <span class="hljs-attr">&quot;all_frames&quot;</span>: <span class="hljs-literal">true</span>
+}],
+
+<span class="hljs-string">&quot;web_accessible_resources&quot;</span>: [{
+    <span class="hljs-attr">&quot;resources&quot;</span>: [<span class="hljs-string">&quot;*.svg&quot;</span>, <span class="hljs-string">&quot;*.mp3&quot;</span>],
+    <span class="hljs-attr">&quot;matches&quot;</span>: [<span class="hljs-string">&quot;&lt;all_urls&gt;&quot;</span>],
+    <span class="hljs-attr">&quot;use_dynamic_url&quot;</span>: <span class="hljs-literal">true</span>
+}]
+</span></span></foreignObject></svg></code></pre>
+</div>
+</div>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="7" data-paginate="true" data-theme="owen" data-marpit-pagination="7" data-marpit-pagination-total="8" style="--paginate:true;--theme:owen;">
+<h2>Part 3 conclusion</h2>
+<ul>
+<li>
+<p>We made a lot of progress, adding assets with icons, a test page, and</p>
+</li>
+<li>
+<p><img class="emoji" draggable="false" alt="👉" src="https://twemoji.maxcdn.com/2/svg/1f449.svg" data-marp-twemoji=""/> Start the next section <a href="3-dom.html">Document Object Model</a></p>
+</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="8" data-paginate="true" data-theme="owen" data-marpit-pagination="8" data-marpit-pagination-total="8" style="--paginate:true;--theme:owen;">
 <h2>TEMPLATE</h2>
 <div class="twocolumn">
 <div class="col">

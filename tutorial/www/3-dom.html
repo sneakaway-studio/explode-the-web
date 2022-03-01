@@ -41,23 +41,34 @@ Presentation comments ...
 
 <ol>
 <li>Download and add project assets</li>
-<li>Add a browser action</li>
+<li>Add a browser action and icons</li>
 <li>Check the trackers on the page</li>
 </ol>
 <hr>
 <h2 id="👉-get-project-assets">👉 Get project assets</h2>
-<ul>
-<li>Let&#39;s get assets you&#39;ll need to continue the project.</li>
-</ul>
 <div class="twocolumn">
 <div class="col">
 
-
-
+<ol>
+<li>Download the <a href="https://github.com/sneakaway-studio/explode-the-web/tree/main/extension"><code>assets.zip</code></a> file you&#39;ll need to continue the tutorial.</li>
+<li>Unzip the folder and place it in your <code>explode-tutorial</code> project folder.</li>
+<li>Your structure should look like this &gt;</li>
+</ol>
 </div>
 <div class="col">
 
-<p>test.html</p>
+<pre><code>/explode-tutorial/
+    assets/
+        css/
+        img/
+        libs/
+        js/
+        pages/
+        sounds/
+    background.js
+    content.js
+    manifest.json
+</code></pre>
 </div>
 </div>
 
@@ -68,14 +79,70 @@ Presentation comments ...
 
 
 <hr>
-<h2 id="👉-add-icons">👉 Add icons</h2>
+<h2 id="browser-action">Browser action</h2>
+<div class="twocolumn">
+<div class="col">
+
+<ul>
+<li>An <a href="https://developer.chrome.com/docs/extensions/reference/action/">action</a> adds an extension icon and popup window to the browser toolbar.</li>
+<li>The action is sometimes called &quot;browser action&quot;, or &quot;popup script&quot;.</li>
+<li>The action popup is an HTML page you define and has its own context (and its own DevTools console!).</li>
+</ul>
+</div>
+<div class="col">
+
+<img width="700" src="../figures/tutorial-2022/2-1-diagram-architecture.svg">
+
+</div>
+</div>
+
+
+
+
+
+
+<hr>
+<h2 id="👉-add-an-action">👉 Add an action</h2>
+<div class="twocolumn">
+<div class="col">
+
+<ol>
+<li>Add a new file to the project folder called <code>action.html</code></li>
+<li>Paste in this code.</li>
+</ol>
+</div>
+<div class="col">
+
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div style=&quot;width:220px; text-align:center&quot;&gt;
+&lt;p&gt;💥 Explode Tracked Pages!&lt;/p&gt;
+&lt;p&gt;Press e + ~ to test&lt;/p&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+</div>
+</div>
+
+
+
+
+
+
+
+<hr>
+<h2 id="👉-add-the-action-and-icons-to-the-manifest">👉 Add the action and icons to the manifest</h2>
 <div class="twocolumn">
 <div class="col">
 
 <ul>
 <li>The icon identifies the browser extension in the <code>chrome://extensions</code> page.</li>
-<li>If you haven&#39;t already, download the assets for this tutorial at:</li>
-<li>Unzip the folder and place it in your <code>explode-tutorial</code> folder.</li>
+<li>Add this code to your manifest to add the icon and action and refresh the extension.</li>
 </ul>
 </div>
 <div class="col">
@@ -86,27 +153,14 @@ Presentation comments ...
     &quot;64&quot;: &quot;assets/img/explosion-icon64.png&quot;,
     &quot;128&quot;: &quot;assets/img/explosion-icon128.png&quot;
 },
-</code></pre>
-</div>
-</div>
 
-
-
-
-<hr>
-<h2 id="👉-add-an-action">👉 Add an action</h2>
-<div class="twocolumn">
-<div class="col">
-
-<ul>
-<li>An <a href="https://developer.chrome.com/docs/extensions/reference/action/">action</a> adds an extension icon and popup window to the browser toolbar.</li>
-<li>The action was formerly called &quot;browser action&quot;, or &quot;popup script&quot;</li>
-</ul>
-</div>
-<div class="col">
-
-<pre><code class="language-json">&quot;background&quot;: {
-    &quot;service_worker&quot;: &quot;background.js&quot;
+&quot;action&quot;: {
+    &quot;default_icon&quot;: {
+        &quot;16&quot;: &quot;assets/img/explosion-icon16.png&quot;,
+        &quot;32&quot;: &quot;assets/img/explosion-icon32.png&quot;
+    },
+    &quot;default_title&quot;: &quot;Explode Tracked Web Pages!&quot;,
+    &quot;default_popup&quot;: &quot;action.html&quot;
 },
 </code></pre>
 </div>
@@ -117,11 +171,60 @@ Presentation comments ...
 
 
 
+<hr>
+<h2 id="👉-add-libraries-to-manifest">👉 Add libraries to manifest</h2>
+<div class="twocolumn">
+<div class="col">
+
+<ul>
+<li>Let&#39;s go ahead and reference the libraries we need in our manifest.</li>
+<li>Edit your <code>content_script</code> section to look like this, and add <code>web_accessible_resources</code> at the end.</li>
+<li>The full manifest can be referenced here if you prefer to copy and paste:</li>
+</ul>
+</div>
+<div class="col">
+
+<pre><code class="language-json">&quot;content_scripts&quot;: [{
+    &quot;matches&quot;: [&quot;&lt;all_urls&gt;&quot;],
+    &quot;js&quot;: [
+        &quot;assets/libs/anime.min-3.2.0.js&quot;,
+        &quot;assets/libs/jquery-3.6.0.min.js&quot;,
+        &quot;assets/libs/purify-2.3.4.js&quot;,
+        &quot;assets/js/disconnect-tracking-services.js&quot;,
+        &quot;assets/js/functions.js&quot;,
+        &quot;assets/js/keys.js&quot;,
+        &quot;assets/js/explode.js&quot;,
+        &quot;content.js&quot;
+    ],
+    &quot;css&quot;: [
+        &quot;assets/css/styles.css&quot;
+    ],
+    &quot;run_at&quot;: &quot;document_end&quot;,
+    &quot;all_frames&quot;: true
+}],
+
+&quot;web_accessible_resources&quot;: [{
+    &quot;resources&quot;: [&quot;*.svg&quot;, &quot;*.mp3&quot;],
+    &quot;matches&quot;: [&quot;&lt;all_urls&gt;&quot;],
+    &quot;use_dynamic_url&quot;: true
+}]
+</code></pre>
+</div>
+</div>
 
 
 
 
 
+
+<hr>
+<h2 id="part-3-conclusion">Part 3 conclusion</h2>
+<ul>
+<li><p>We made a lot of progress, adding assets with icons, a test page, and</p>
+</li>
+<li><p>👉 Start the next section <a href="3-dom.html">Document Object Model</a></p>
+</li>
+</ul>
 <hr>
 <h2 id="template">TEMPLATE</h2>
 <div class="twocolumn">

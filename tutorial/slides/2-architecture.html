@@ -26,7 +26,6 @@ local pagination directive still required */div#p>svg>foreignObject>section:afte
 <li>Extension architecture</li>
 <li>Background Scripts</li>
 <li>Content Scripts</li>
-<li>Browser action</li>
 <li>Debug an extension</li>
 </ol>
 </section>
@@ -88,8 +87,8 @@ local pagination directive still required */div#p>svg>foreignObject>section:afte
 <div class="twocolumn">
 <div class="col">
 <ul>
-<li><img class="emoji" draggable="false" alt="👉" src="https://twemoji.maxcdn.com/2/svg/1f449.svg" data-marp-twemoji=""/> Update <code>manifest.json</code> to reference the new files, <em>before</em> the closing <code>}</code> (curly brace).</li>
-<li>Your <code>manifest.json</code> file should now look like this.</li>
+<li><img class="emoji" draggable="false" alt="👉" src="https://twemoji.maxcdn.com/2/svg/1f449.svg" data-marp-twemoji=""/> Update <code>manifest.json</code> to reference the new files.</li>
+<li>Manifest files use JSON, which has a strict syntax. If you have issues then try checking your manifest code using <a href="https://jsonlint.com/">jsonlint.com</a>.</li>
 <li>Refresh your extension at <code>chrome://extensions</code> and go to any page. For example: <a target="_blank" href="https://www.eff.org">eff.org</a></li>
 </ul>
 </div>
@@ -110,6 +109,7 @@ local pagination directive still required */div#p>svg>foreignObject>section:afte
     }]
 }
 </span></span></foreignObject></svg></code></pre>
+<div class="slides-small caption">Your `manifest.json` file should now look like this.</div>
 </div>
 </div>
 </section>

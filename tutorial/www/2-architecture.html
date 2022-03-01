@@ -43,7 +43,6 @@ Presentation comments ...
 <li>Extension architecture</li>
 <li>Background Scripts</li>
 <li>Content Scripts</li>
-<li>Browser action</li>
 <li>Debug an extension</li>
 </ol>
 <hr>
@@ -137,8 +136,8 @@ console.log(&quot;💥 Hello from content.js&quot;);
 <div class="col">
 
 <ul>
-<li>👉 Update <code>manifest.json</code> to reference the new files, <em>before</em> the closing <code>}</code> (curly brace).</li>
-<li>Your <code>manifest.json</code> file should now look like this.</li>
+<li>👉 Update <code>manifest.json</code> to reference the new files.</li>
+<li>Manifest files use JSON, which has a strict syntax. If you have issues then try checking your manifest code using <a href="https://jsonlint.com/">jsonlint.com</a>.</li>
 <li>Refresh your extension at <code>chrome://extensions</code> and go to any page. For example: <a target="_blank" href="https://www.eff.org">eff.org</a></li>
 </ul>
 </div>
@@ -160,6 +159,8 @@ console.log(&quot;💥 Hello from content.js&quot;);
     }]
 }
 </code></pre>
+<div class="slides-small caption">Your `manifest.json` file should now look like this.</div>
+
 </div>
 </div>
 
