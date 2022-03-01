@@ -13,7 +13,6 @@ Presentation comments ...
 1. Extension architecture
 1. Background Scripts
 1. Content Scripts
-1. Browser action
 1. Debug an extension
 
 
@@ -122,8 +121,8 @@ console.log("💥 Hello from content.js");
 <div class="twocolumn">
 <div class="col">
 
-- 👉 Update `manifest.json` to reference the new files, *before* the closing `}` (curly brace).
-- Your `manifest.json` file should now look like this.
+- 👉 Update `manifest.json` to reference the new files.
+- Manifest files use JSON, which has a strict syntax. If you have issues then try checking your manifest code using [jsonlint.com](https://jsonlint.com/).
 - Refresh your extension at `chrome://extensions` and go to any page. For example: <a target="_blank" href="https://www.eff.org">eff.org</a>
 
 </div>
@@ -146,6 +145,8 @@ console.log("💥 Hello from content.js");
     }]
 }
 ```
+
+<div class="slides-small caption">Your `manifest.json` file should now look like this.</div>
 
 </div>
 </div>
