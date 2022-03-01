@@ -40,52 +40,60 @@ Presentation comments ...
 -->
 
 <ol>
-<li>Create the architecture</li>
+<li>Extension architecture</li>
 <li>Background Scripts</li>
 <li>Content Scripts</li>
-<li>Popup action</li>
+<li>Browser action</li>
 <li>Debug an extension</li>
 </ol>
 <hr>
-<h2 id="👉-create-the-project-architecture">👉 Create the project architecture</h2>
-<ul>
-<li>In this section we will add several files to create the archicture for the extension.</li>
-<li>Let&#39;s start with assets you&#39;ll need.</li>
-</ul>
-<p>Adding a &quot;test page&quot; makes it easy to test our project as we build onto it.</p>
+<h2 id="extension-architecture">Extension architecture</h2>
 <div class="twocolumn">
 <div class="col">
 
-<ol>
-<li>Create a new file called <code>test.html</code> inside the root of your project folder.</li>
-<li>Paste or type the example into this file.</li>
-<li>Open your test page in the browser in a tab next to the <code>chrome://extensions</code> page</li>
-</ol>
+<ul>
+<li>The distinct &quot;contexts&quot; for scripts in an extension determine what your code can do and data it can access.</li>
+<li>This separation provides security, but increases complexity.</li>
+<li>Let&#39;s add files to project and manifest using the three most common.</li>
+</ul>
 </div>
 <div class="col">
 
+<img width="700" src="../figures/tutorial-2022/2-1-diagram-architecture.svg">
 
+<div class="slides-small caption">Basic architecture and contexts of a browser extension. The file names and <a target="_blank" href="https://developer.chrome.com/docs/extensions/mv3/architecture-overview/">structure</a> is up to you.</div>
 
 </div>
 </div>
 
-<div class="slides-small caption">The previous HTML example showed CSS and JS in separate files. For simplicity, this test page keeps them in a single document.</div>
 
-<div class="slides-small caption">Our project folder "explode-tutorial" is where we'll add files to build the extension. Files added directly to this folder like "explode-tutorial/manifest.json" are said to be in the "root" of the project folder.</div>
+
+
+
+
+
+
+
 
 
 
 
 <hr>
-<h2 id="👉-add-a-background-script">👉 Add a background script</h2>
+<h2 id="👉-add-a-background-service-worker">👉 Add a background service worker</h2>
 <div class="twocolumn">
 <div class="col">
 
-
-
+<ul>
+<li>Background <a target="_blank" href="https://developer.chrome.com/docs/extensions/mv3/service_workers/">service workers</a> are loaded just once, during installation.</li>
+<li>Background scripts operate continuously, can use certain browser APIs like <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage">localStorage</a>, and connect to external APIs or databases.</li>
+</ul>
 </div>
 <div class="col">
 
+<pre><code class="language-js">// background.js
+console.log(&quot;Hello from the background script!&quot;);
+</code></pre>
+<p>Add a file <code>background.js</code> to the root of your project and paste this code.</p>
 <pre><code class="language-json">&quot;background&quot;: {
     &quot;service_worker&quot;: &quot;background.js&quot;
 },
@@ -93,37 +101,74 @@ Presentation comments ...
 </div>
 </div>
 
-<div class="slides-small caption">Reference: <a target="_blank" href="https://developer.chrome.com/docs/extensions/mv3/service_workers/">service workers</a></div>
+
+<div class="slides-small caption">Our project folder "explode-tutorial" is where we'll add files to build the extension. Files added directly to this folder like "explode-tutorial/manifest.json" are said to be in the "root" of the project folder.</div>
 
 
-<p><a href="https://developer.chrome.com/docs/extensions/mv3/architecture-overview/">https://developer.chrome.com/docs/extensions/mv3/architecture-overview/</a></p>
+
+
 <hr>
 <h2 id="👉-add-a-content-script">👉 Add a content script</h2>
-<p>Content scripts are injected into web pages a user visits and can access content, listen for events, etc. like other scripts on that page.</p>
 <div class="twocolumn">
 <div class="col">
 
-<ol>
-<li>Add a file <code>content.js</code> to the root of your project.</li>
-<li>Update <code>manifest.json</code> to reference this file.</li>
-<li></li>
-</ol>
+<ul>
+<li><a target="_blank" href="https://developer.chrome.com/docs/extensions/mv3/content_scripts/">Content scripts</a> run inside web pages a user visits.</li>
+<li>They are loaded (a.k.a. &quot;injected&quot;) into <em>each</em> page a user visits, and so can access web page content or listen for user events (just like other scripts on a web page).</li>
+<li>Content scripts can send and receive data from the background via <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#communicating_with_background_scripts">messages</a>.</li>
+</ul>
 </div>
 <div class="col">
 
 <pre><code class="language-js">// content.js
+console.log(&quot;Hello from content.js&quot;);
+console.log(`Title: ${document.title}`);
 </code></pre>
+<p>Add a file <code>content.js</code> to the root of your project and paste this code.</p>
 <pre><code class="language-json">&quot;content_scripts&quot;: [{
     &quot;matches&quot;: [&quot;&lt;all_urls&gt;&quot;],
-    &quot;css&quot;: [&quot;styles.css&quot;],
     &quot;js&quot;: [&quot;content.js&quot;]
 }],
 </code></pre>
+<p>Update <code>manifest.json</code> to reference the new file by adding the above.</p>
 </div>
 </div>
 
-<div class="slides-small caption">Reference: <a target="_blank" href="https://developer.chrome.com/docs/extensions/mv3/content_scripts/">content scripts</a></div>
 
+<!-- console.log("Hello from the content script at " + window.location.href); -->
+
+
+
+
+
+<hr>
+<h2 id="👉-add-a-page-action">👉 Add a page action</h2>
+<p>Browser action | a.k.a. &quot;popup script&quot; appears when a user clicks on the extension icon at the top right of the browser.</p>
+<hr>
+<h2 id="👉-check-the-manifest">👉 Check the manifest</h2>
+<div class="twocolumn">
+<div class="col">
+
+<p>Your <code>manifest.json</code> file should now look like this.</p>
+</div>
+<div class="col">
+
+<pre><code class="language-json">{
+    &quot;name&quot;: &quot;My First Browser Extension&quot;,
+    &quot;description&quot;: &quot;🐌&quot;,
+    &quot;version&quot;: &quot;1.1&quot;,
+    &quot;manifest_version&quot;: 2,
+    &quot;content_scripts&quot;: [{
+        &quot;matches&quot;: [&quot;&lt;all_urls&gt;&quot;],
+        &quot;js&quot;: [&quot;content.js&quot;]
+    }],
+    &quot;background&quot;: {
+        &quot;scripts&quot;: [&quot;background.js&quot;]
+    }
+}
+</code></pre>
+</div>
+</div>
 
 
 
@@ -135,6 +180,7 @@ Presentation comments ...
 <ol>
 <li>Perhaps the most important thing besides proof your project is &quot;working&quot; is to be able to determine and debug when it is <em>not working</em>.</li>
 </ol>
+<p>The content script is injected in the page, so you can see this message in the regular dev tools on any page. To see the message from the background script, click on &quot;Inspect views background page&quot; at <code>chrome://extensions</code></p>
 <hr>
 <h2 id="template">TEMPLATE</h2>
 <div class="twocolumn">

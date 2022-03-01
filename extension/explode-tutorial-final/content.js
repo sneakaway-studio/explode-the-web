@@ -1,3 +1,7 @@
+// content.js
+console.log("Hello from content.js");
+console.log(`The page title is ${document.title}`);
+
 // get scripts on the page
 var scriptsFound = document.getElementsByTagName("script");
 // store trackers we find

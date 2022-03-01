@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 26.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 700 300" style="enable-background:new 0 0 700 300;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+	.st1{fill:#B3B3B3;}
+	.st2{fill:none;}
+	.st3{font-family:'ArialMT';}
+	.st4{font-size:28.7911px;}
+	.st5{fill:#CCCCCC;}
+	.st6{fill-rule:evenodd;clip-rule:evenodd;fill:#3FA9F5;}
+	.st7{font-size:17.9944px;}
+	.st8{fill:none;stroke:#B3B3B3;stroke-width:2;stroke-miterlimit:10;}
+	.st9{fill:none;stroke:#3FA9F5;stroke-width:3;stroke-miterlimit:10;}
+	.st10{fill:#3FA9F5;}
+	.st11{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;stroke:#3FA9F5;stroke-width:3;stroke-miterlimit:10;}
+</style>
+<g>
+	<rect x="18" y="55.8" class="st0" width="348.5" height="223.6"/>
+	<path class="st1" d="M365.5,56.8v221.6H19V56.8H365.5 M367.5,54.8H17v225.6h350.5V54.8L367.5,54.8z"/>
+</g>
+<rect x="89.7" y="110.1" class="st2" width="205.2" height="44.1"/>
+<text transform="matrix(1 0 0 1 126.627 130.7485)" class="st1 st3 st4">Web page</text>
+<g>
+	<g>
+		<rect x="18" y="24.4" class="st0" width="348.5" height="32"/>
+		<path class="st1" d="M365.5,25.4v30H19v-30L365.5,25.4 M367.5,23.4H17v34h350.5V23.4L367.5,23.4z"/>
+	</g>
+	<g>
+		<rect x="82.3" y="34.9" class="st5" width="227.7" height="11.1"/>
+	</g>
+	<g>
+		<circle class="st1" cx="35.2" cy="40.4" r="5.2"/>
+	</g>
+	<g>
+		<circle class="st1" cx="50.8" cy="40.4" r="5.2"/>
+	</g>
+	<g>
+		<circle class="st1" cx="66.5" cy="40.4" r="5.2"/>
+	</g>
+</g>
+<rect x="68.8" y="169.7" class="st6" width="241.6" height="85.1"/>
+<rect x="415.9" y="169.9" class="st6" width="263.5" height="85.1"/>
+<rect x="412.3" y="186.9" class="st2" width="270.7" height="56.3"/>
+<text transform="matrix(1 0 0 1 458.0088 207.5107)" class="st0 st3 st4">background.js</text>
+<text transform="matrix(1 0 0 1 439.1088 232.7107)" class="st0 st3 st7">Background service worker</text>
+<rect x="88.4" y="186.9" class="st2" width="205.2" height="56.3"/>
+<text transform="matrix(1 0 0 1 129.3911 207.5107)" class="st0 st3 st4">content.js</text>
+<text transform="matrix(1 0 0 1 103.4911 232.7107)" class="st0 st3 st7">Injected content script</text>
+<rect x="415.9" y="19" class="st6" width="263.5" height="85.1"/>
+<rect x="412.3" y="36" class="st2" width="270.7" height="56.3"/>
+<text transform="matrix(1 0 0 1 493.2109 56.6201)" class="st0 st3 st4">popup.js</text>
+<text transform="matrix(1 0 0 1 487.1109 81.8201)" class="st0 st3 st7">Browser Action</text>
+<g>
+	<line class="st8" x1="415.7" y1="58.6" x2="357" y2="36"/>
+</g>
+<g>
+	<line class="st8" x1="416" y1="59" x2="359" y2="83"/>
+</g>
+<g>
+	<g>
+		<line class="st9" x1="321.2" y1="208.3" x2="406.7" y2="208.3"/>
+	</g>
+	<polygon class="st6" points="417,208.1 404,215.8 404,200.3 	"/>
+	<polygon class="st6" points="310.9,208.1 323.9,200.3 323.9,215.8 	"/>
+</g>
+<g>
+	<g>
+		<line class="st9" x1="551.9" y1="114.8" x2="551.9" y2="160.1"/>
+	</g>
+	<polygon class="st6" points="552.2,170.4 544.5,157.4 559.9,157.4 	"/>
+	<polygon class="st6" points="552.2,104.5 559.9,117.5 544.5,117.5 	"/>
+</g>
+<g>
+	<path class="st10" d="M350,35.6c2.5,0,4.4,1.9,4.4,4.4s-1.9,4.4-4.4,4.4s-4.4-1.9-4.4-4.4S347.5,35.6,350,35.6 M350,34
+		c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6-6S353.3,34,350,34L350,34z"/>
+</g>
+<g>
+	<path class="st5" d="M335,35.6c2.5,0,4.4,1.9,4.4,4.4s-1.9,4.4-4.4,4.4s-4.4-1.9-4.4-4.4S332.5,35.6,335,35.6 M335,34
+		c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6-6S338.3,34,335,34L335,34z"/>
+</g>
+<g>
+	<path class="st5" d="M320,35.6c2.5,0,4.4,1.9,4.4,4.4s-1.9,4.4-4.4,4.4s-4.4-1.9-4.4-4.4S317.5,35.6,320,35.6 M320,34
+		c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6-6S323.3,34,320,34L320,34z"/>
+</g>
+<rect x="310" y="51" class="st11" width="46" height="34"/>
+</svg>
