@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+    
+    
+    
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Explode the Web! - markdown/2-architecture</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/icons/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/icons/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/icons/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="../assets/img/icons/favicon_io/site.webmanifest">
+    <!-- <link rel="shortcut icon" type="image/x-icon" href="../assets/img/icons/favicon_io/favicon.ico"> -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/atom-one-dark.min.css">
+    <link rel="stylesheet" href="../assets/css/www-styles.css">
+
+</head>
+
+<body>
+
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-md-10 offset-md-1">
+            <!-- paginate: true -->
+
+<h1 id="-2-archicture-and-debugging"><img width="4%" src="../../extension/explode-tutorial-final/assets/img/explosion-tutorial-icon.svg"> 2-Archicture and debugging</h1>
+<p><span class="slides-small"><a href="../slides/2-architecture.html">slides</a> | <span class="slides-small"><a href="../markdown/2-architecture.md">markdown</a> | <a href="../www/2-architecture.html">HTML</a></span></p>
+<p><span class="slides-small"><a href="../../README.md">⌂</a> | <a href="0-introduction.html">0-Introduction</a> | <a href="1-hello-world.html">1-Hello World!</a> | <a href="2-architecture.html">2-Architecture</a> | <a href="3-dom.html">3-DOM</a> | <a href="4-explosion.html">4-Explosion</a> | <a href="5-publishing.html">5-Publishing</a></span></p>
+<!--
+Presentation comments ...
+-->
+
+<ol>
+<li>Extension architecture</li>
+<li>Background Scripts</li>
+<li>Content Scripts</li>
+<li>Browser action</li>
+<li>Debug an extension</li>
+</ol>
+<hr>
+<h2 id="extension-architecture">Extension architecture</h2>
+<div class="twocolumn">
+<div class="col">
+
+<ul>
+<li>The distinct &quot;contexts&quot; for scripts in an extension determine what your code can do and data it can access.</li>
+<li>This separation provides security, but increases complexity.</li>
+<li>Let&#39;s add the content and background files to the project and manifest.</li>
+</ul>
+</div>
+<div class="col">
+
+<img width="700" src="../figures/tutorial-2022/2-1-diagram-architecture.svg">
+
+<div class="slides-small caption">Basic architecture and contexts of a browser extension. The file names and <a target="_blank" href="https://developer.chrome.com/docs/extensions/mv3/architecture-overview/">structure</a> is up to you.</div>
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<hr>
+<h2 id="background-service-workers">Background service workers</h2>
+<div class="twocolumn">
+<div class="col">
+
+<ul>
+<li>Background <a target="_blank" href="https://developer.chrome.com/docs/extensions/mv3/service_workers/">service workers</a> are loaded just once, during installation.</li>
+<li>Background scripts operate continuously, and they can use certain browser APIs like <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage">localStorage</a> and connect to external APIs or databases.</li>
+<li>We aren&#39;t going to do much with the background, but in a second well see how it is important.</li>
+</ul>
+</div>
+<div class="col">
+
+
+<p>👉 Add a new file <code>background.js</code> to the root of your project folder and paste this code.</p>
+<pre><code class="language-js">// background.js
+console.log(&quot;💥 Hello from background.js&quot;);
+</code></pre>
+<div class="slides-small caption">The "root" means directly to `explode-tutorial` folder so the path = `explode-tutorial/background.js`.</div>
+
+</div>
+</div>
+
+
+
+
+
+
+<hr>
+<h2 id="content-scripts">Content scripts</h2>
+<div class="twocolumn">
+<div class="col">
+
+<ul>
+<li><a target="_blank" href="https://developer.chrome.com/docs/extensions/mv3/content_scripts/">Content scripts</a> run inside web pages that users visit.</li>
+<li>They are loaded (&quot;injected&quot;) into <em>each</em> page a user visits, so can access web page content or listen for user events (the same as other scripts on a page).</li>
+<li>A content script&#39;s activity is limited to the current page, but they can send and receive data from the background via <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#communicating_with_background_scripts">messages</a>.</li>
+</ul>
+</div>
+<div class="col">
+
+<p>👉 Add a new file <code>content.js</code> to the root of your project and paste this code.</p>
+<pre><code class="language-js">// content.js
+console.log(&quot;💥 Hello from content.js&quot;);
+</code></pre>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+<hr>
+<h2 id="check-the-manifest">Check the manifest</h2>
+<div class="twocolumn">
+<div class="col">
+
+<ul>
+<li>👉 Update <code>manifest.json</code> to reference the new files, <em>before</em> the closing <code>}</code> (curly brace).</li>
+<li>Your <code>manifest.json</code> file should now look like this.</li>
+<li>Refresh your extension at <code>chrome://extensions</code> and go to any page. For example: <a target="_blank" href="https://www.eff.org">eff.org</a></li>
+</ul>
+</div>
+<div class="col">
+
+<pre><code class="language-json">{
+    &quot;name&quot;: &quot;Explode the Web! Tutorial&quot;,
+    &quot;description&quot;: &quot;🦆&quot;,
+    &quot;version&quot;: &quot;1.2.0&quot;,
+    &quot;manifest_version&quot;: 3,
+
+    &quot;background&quot;: {
+        &quot;service_worker&quot;: &quot;background.js&quot;
+    },
+
+    &quot;content_scripts&quot;: [{
+        &quot;matches&quot;: [&quot;&lt;all_urls&gt;&quot;],
+        &quot;js&quot;: [&quot;content.js&quot;]
+    }]
+}
+</code></pre>
+</div>
+</div>
+
+
+
+
+
+
+<hr>
+<h2 id="👉-debug-an-extension-content-script">👉 Debug an extension content script</h2>
+<p>Besides proof your project is &quot;working&quot;, it is important to be able to see information when it is <em><strong>not working</strong></em>.</p>
+<ol>
+<li>On the previous test link, right-click any element on the page and select <strong>Inspect</strong> to open a <a target="_blank" href="https://developer.chrome.com/docs/devtools/open/">DevTools</a> panel like the one below.</li>
+<li>Click on <strong>Console</strong> to confirm you can see your message.</li>
+</ol>
+<img width="800" src="../figures/tutorial-2022/2-2-devtools-content.png">
+
+
+
+
+
+
+
+
+<hr>
+<h2 id="👉-debug-an-extension-background-script">👉 Debug an extension background script</h2>
+<p>The content script is injected into each page, so you can see console messages in the regular DevTools.</p>
+<ol>
+<li>To open a new DevTools panel for just the background, go to <code>chrome://extensions</code> and click on &quot;Inspect views service worker&quot;.</li>
+<li>Click on <strong>Console</strong> and confirm you can see your message.</li>
+</ol>
+<img width="800" src="../figures/tutorial-2022/2-2-devtools-background.png">
+
+
+
+
+
+
+<hr>
+<h2 id="part-2-conclusion">Part 2 conclusion</h2>
+<ul>
+<li>We added background and content scripts, updated the manifest, and learned how to inspect an extension in Chrome.</li>
+<li>👉 Start the next section <a href="3-dom.html">Document Object Model</a></li>
+</ul>
+
+        </div>
+    </div>
+</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
+</body>
+</html>
