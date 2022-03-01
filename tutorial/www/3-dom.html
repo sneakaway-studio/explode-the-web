@@ -32,47 +32,85 @@
         <div class="col-12 col-md-10 offset-md-1">
             <!-- paginate: true -->
 
-<h1 id="-2-archicture-and-debugging"><img width="4%" src="../../extension/explode-tutorial-final/assets/img/explosion-tutorial-icon.svg"> 2-Archicture and debugging</h1>
-<p><span class="slides-small"><a href="../slides/2-architecture.html">slides</a> | <span class="slides-small"><a href="../markdown/2-architecture.md">markdown</a> | <a href="../www/2-architecture.html">HTML</a></span></p>
+<h1 id="-3-dom"><img width="4%" src="../../extension/explode-tutorial-final/assets/img/explosion-tutorial-icon.svg"> 3-DOM</h1>
+<p><span class="slides-small"><a href="../slides/3-dom.html">slides</a> | <span class="slides-small"><a href="../markdown/3-dom">markdown</a> | <a href="../www/3-dom.html">HTML</a></span></p>
 <p><span class="slides-small"><a href="../../README.md">⌂</a> | <a href="0-introduction.html">0-Introduction</a> | <a href="1-hello-world.html">1-Hello World!</a> | <a href="2-architecture.html">2-Architecture</a> | <a href="3-dom.html">3-DOM</a> | <a href="4-explosion.html">4-Explosion</a> | <a href="5-publishing.html">5-Publishing</a></span></p>
 <!--
 Presentation comments ...
 -->
 
 <ol>
-<li>Extension architecture</li>
-<li>Background Scripts</li>
-<li>Content Scripts</li>
-<li>Browser action</li>
-<li>Debug an extension</li>
+<li>Download and add project assets</li>
+<li>Add a browser action</li>
+<li>Check the trackers on the page</li>
 </ol>
 <hr>
-<h2 id="👉-extension-architecture">👉 Extension architecture</h2>
+<h2 id="👉-get-project-assets">👉 Get project assets</h2>
 <ul>
-<li>Let&#39;s start with assets you&#39;ll need.
-Adding a &quot;test page&quot; makes it easy to test our project as we build onto it.</li>
+<li>Let&#39;s get assets you&#39;ll need to continue the project.</li>
 </ul>
 <div class="twocolumn">
 <div class="col">
 
-<ol>
-<li>Create a new file called <code>test.html</code> inside the root of your project folder.</li>
-<li>Paste or type the example into this file.</li>
-<li>Open your test page in the browser in a tab next to the <code>chrome://extensions</code> page</li>
-</ol>
+
+
 </div>
 <div class="col">
 
-
-
+<p>test.html</p>
 </div>
 </div>
 
-<div class="slides-small caption">The previous HTML example showed CSS and JS in separate files. For simplicity, this test page keeps them in a single document.</div>
 
 
 
 
+
+
+<hr>
+<h2 id="👉-add-icons">👉 Add icons</h2>
+<div class="twocolumn">
+<div class="col">
+
+<ul>
+<li>The icon identifies the browser extension in the <code>chrome://extensions</code> page.</li>
+<li>If you haven&#39;t already, download the assets for this tutorial at:</li>
+<li>Unzip the folder and place it in your <code>explode-tutorial</code> folder.</li>
+</ul>
+</div>
+<div class="col">
+
+<pre><code class="language-json">&quot;icons&quot;: {
+    &quot;16&quot;: &quot;assets/img/explosion-icon16.png&quot;,
+    &quot;32&quot;: &quot;assets/img/explosion-icon32.png&quot;,
+    &quot;64&quot;: &quot;assets/img/explosion-icon64.png&quot;,
+    &quot;128&quot;: &quot;assets/img/explosion-icon128.png&quot;
+},
+</code></pre>
+</div>
+</div>
+
+
+
+
+<hr>
+<h2 id="👉-add-an-action">👉 Add an action</h2>
+<div class="twocolumn">
+<div class="col">
+
+<ul>
+<li>An <a href="https://developer.chrome.com/docs/extensions/reference/action/">action</a> adds an extension icon and popup window to the browser toolbar.</li>
+<li>The action was formerly called &quot;browser action&quot;, or &quot;popup script&quot;</li>
+</ul>
+</div>
+<div class="col">
+
+<pre><code class="language-json">&quot;background&quot;: {
+    &quot;service_worker&quot;: &quot;background.js&quot;
+},
+</code></pre>
+</div>
+</div>
 
 
 

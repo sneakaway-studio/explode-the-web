@@ -30,7 +30,7 @@ Presentation comments ...
 
 - The distinct "contexts" for scripts in an extension determine what your code can do and data it can access.
 - This separation provides security, but increases complexity.
-- Let's add files to project and manifest using the three most common.
+- Let's add the content and background files to the project and manifest.
 
 </div>
 <div class="col">
@@ -51,89 +51,63 @@ Presentation comments ...
 
 
 
-
-
-
 ---
 
-## 👉 Add a background service worker
+## Background service workers
 
 <div class="twocolumn">
 <div class="col">
 
 - Background <a target="_blank" href="https://developer.chrome.com/docs/extensions/mv3/service_workers/">service workers</a> are loaded just once, during installation.
-- Background scripts operate continuously, can use certain browser APIs like [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage), and connect to external APIs or databases.
+- Background scripts operate continuously, and they can use certain browser APIs like [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) and connect to external APIs or databases.
+- We aren't going to do much with the background, but in a second well see how it is important.
 
 </div>
 <div class="col">
+
+
+👉 Add a new file `background.js` to the root of your project folder and paste this code.
 
 ```js
 // background.js
-console.log("Hello from the background script!");
+console.log("💥 Hello from background.js");
 ```
 
-Add a file `background.js` to the root of your project and paste this code.
-
-```json
-"background": {
-    "service_worker": "background.js"
-},
-```
+<div class="slides-small caption">The "root" means directly to `explode-tutorial` folder so the path = `explode-tutorial/background.js`.</div>
 
 </div>
 </div>
 
 
-<div class="slides-small caption">Our project folder "explode-tutorial" is where we'll add files to build the extension. Files added directly to this folder like "explode-tutorial/manifest.json" are said to be in the "root" of the project folder.</div>
 
 
 
 
 ---
 
-## 👉 Add a content script
+## Content scripts
 
 <div class="twocolumn">
 <div class="col">
 
-- <a target="_blank" href="https://developer.chrome.com/docs/extensions/mv3/content_scripts/">Content scripts</a> run inside web pages a user visits.
-- They are loaded (a.k.a. "injected") into *each* page a user visits, and so can access web page content or listen for user events (just like other scripts on a web page).
-- Content scripts can send and receive data from the background via [messages](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#communicating_with_background_scripts).
+- <a target="_blank" href="https://developer.chrome.com/docs/extensions/mv3/content_scripts/">Content scripts</a> run inside web pages that users visit.
+- They are loaded ("injected") into *each* page a user visits, so can access web page content or listen for user events (the same as other scripts on a page).
+- A content script's activity is limited to the current page, but they can send and receive data from the background via [messages](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#communicating_with_background_scripts).
 
 </div>
 <div class="col">
+
+👉 Add a new file `content.js` to the root of your project and paste this code.
 
 ```js
 // content.js
-console.log("Hello from content.js");
-console.log(`Title: ${document.title}`);
+console.log("💥 Hello from content.js");
 ```
-
-Add a file `content.js` to the root of your project and paste this code.
-
-```json
-"content_scripts": [{
-    "matches": ["<all_urls>"],
-    "js": ["content.js"]
-}],
-```
-Update `manifest.json` to reference the new file by adding the above.
 
 </div>
 </div>
 
 
-<!-- console.log("Hello from the content script at " + window.location.href); -->
-
-
-
-
-
----
-
-## 👉 Add a page action
-
-Browser action | a.k.a. "popup script" appears when a user clicks on the extension icon at the top right of the browser.
 
 
 
@@ -143,29 +117,33 @@ Browser action | a.k.a. "popup script" appears when a user clicks on the extensi
 
 ---
 
-## 👉 Check the manifest
+## Check the manifest
 
 <div class="twocolumn">
 <div class="col">
 
-Your `manifest.json` file should now look like this.
+- 👉 Update `manifest.json` to reference the new files, *before* the closing `}` (curly brace).
+- Your `manifest.json` file should now look like this.
+- Refresh your extension at `chrome://extensions` and go to any page. For example: <a target="_blank" href="https://www.eff.org">eff.org</a>
 
 </div>
 <div class="col">
 
 ```json
 {
-	"name": "My First Browser Extension",
-	"description": "🐌",
-	"version": "1.1",
-	"manifest_version": 2,
-	"content_scripts": [{
-		"matches": ["<all_urls>"],
-		"js": ["content.js"]
-	}],
-	"background": {
-		"scripts": ["background.js"]
-	}
+	"name": "Explode the Web! Tutorial",
+    "description": "🦆",
+    "version": "1.2.0",
+    "manifest_version": 3,
+
+    "background": {
+        "service_worker": "background.js"
+    },
+
+    "content_scripts": [{
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+    }]
 }
 ```
 
@@ -179,13 +157,17 @@ Your `manifest.json` file should now look like this.
 
 ---
 
-## How to debug an extension
+## 👉 Debug an extension content script
 
 
-1. Perhaps the most important thing besides proof your project is "working" is to be able to determine and debug when it is *not working*.
+Besides proof your project is "working", it is important to be able to see information when it is ***not working***.
+
+1. On the previous test link, right-click any element on the page and select **Inspect** to open a <a target="_blank" href="https://developer.chrome.com/docs/devtools/open/">DevTools</a> panel like the one below.
+1. Click on **Console** to confirm you can see your message.
+
+<img width="800" src="../figures/tutorial-2022/2-2-devtools-content.png">
 
 
-The content script is injected in the page, so you can see this message in the regular dev tools on any page. To see the message from the background script, click on "Inspect views background page" at `chrome://extensions`
 
 
 
@@ -194,17 +176,24 @@ The content script is injected in the page, so you can see this message in the r
 
 ---
 
-## TEMPLATE
-
-<div class="twocolumn">
-<div class="col">
+## 👉 Debug an extension background script
 
 
+The content script is injected into each page, so you can see console messages in the regular DevTools.
 
-</div>
-<div class="col">
+1. To open a new DevTools panel for just the background, go to `chrome://extensions` and click on "Inspect views service worker".
+1. Click on **Console** and confirm you can see your message.
+
+<img width="800" src="../figures/tutorial-2022/2-2-devtools-background.png">
 
 
 
-</div>
-</div>
+
+
+
+---
+
+## Part 2 conclusion
+
+- We added background and content scripts, updated the manifest, and learned how to inspect an extension in Chrome.
+- 👉 Start the next section [Document Object Model](3-dom.html)

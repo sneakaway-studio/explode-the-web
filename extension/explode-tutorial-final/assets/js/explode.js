@@ -56,9 +56,6 @@ function explodeThePage() {
 			// console.log("Autoplay prevented!", err);
 		});
 	}
-
-
-
 }
 
 /**

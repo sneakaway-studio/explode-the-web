@@ -21,8 +21,7 @@
     },
 
     "background": {
-        "service_worker": "background.js",
-        "type": "module"
+        "service_worker": "background.js"
     },
 
     "content_scripts": [{
@@ -38,7 +37,6 @@
             "content.js"
         ],
         "css": [
-            "assets/css/reset.css",
             "assets/css/styles.css"
         ],
         "run_at": "document_end",

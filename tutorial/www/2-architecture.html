@@ -54,7 +54,7 @@ Presentation comments ...
 <ul>
 <li>The distinct &quot;contexts&quot; for scripts in an extension determine what your code can do and data it can access.</li>
 <li>This separation provides security, but increases complexity.</li>
-<li>Let&#39;s add files to project and manifest using the three most common.</li>
+<li>Let&#39;s add the content and background files to the project and manifest.</li>
 </ul>
 </div>
 <div class="col">
@@ -75,96 +75,89 @@ Presentation comments ...
 
 
 
-
-
-
 <hr>
-<h2 id="👉-add-a-background-service-worker">👉 Add a background service worker</h2>
+<h2 id="background-service-workers">Background service workers</h2>
 <div class="twocolumn">
 <div class="col">
 
 <ul>
 <li>Background <a target="_blank" href="https://developer.chrome.com/docs/extensions/mv3/service_workers/">service workers</a> are loaded just once, during installation.</li>
-<li>Background scripts operate continuously, can use certain browser APIs like <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage">localStorage</a>, and connect to external APIs or databases.</li>
+<li>Background scripts operate continuously, and they can use certain browser APIs like <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage">localStorage</a> and connect to external APIs or databases.</li>
+<li>We aren&#39;t going to do much with the background, but in a second well see how it is important.</li>
 </ul>
 </div>
 <div class="col">
 
+
+<p>👉 Add a new file <code>background.js</code> to the root of your project folder and paste this code.</p>
 <pre><code class="language-js">// background.js
-console.log(&quot;Hello from the background script!&quot;);
+console.log(&quot;💥 Hello from background.js&quot;);
 </code></pre>
-<p>Add a file <code>background.js</code> to the root of your project and paste this code.</p>
-<pre><code class="language-json">&quot;background&quot;: {
-    &quot;service_worker&quot;: &quot;background.js&quot;
-},
-</code></pre>
+<div class="slides-small caption">The "root" means directly to `explode-tutorial` folder so the path = `explode-tutorial/background.js`.</div>
+
 </div>
 </div>
 
 
-<div class="slides-small caption">Our project folder "explode-tutorial" is where we'll add files to build the extension. Files added directly to this folder like "explode-tutorial/manifest.json" are said to be in the "root" of the project folder.</div>
 
 
 
 
 <hr>
-<h2 id="👉-add-a-content-script">👉 Add a content script</h2>
+<h2 id="content-scripts">Content scripts</h2>
 <div class="twocolumn">
 <div class="col">
 
 <ul>
-<li><a target="_blank" href="https://developer.chrome.com/docs/extensions/mv3/content_scripts/">Content scripts</a> run inside web pages a user visits.</li>
-<li>They are loaded (a.k.a. &quot;injected&quot;) into <em>each</em> page a user visits, and so can access web page content or listen for user events (just like other scripts on a web page).</li>
-<li>Content scripts can send and receive data from the background via <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#communicating_with_background_scripts">messages</a>.</li>
+<li><a target="_blank" href="https://developer.chrome.com/docs/extensions/mv3/content_scripts/">Content scripts</a> run inside web pages that users visit.</li>
+<li>They are loaded (&quot;injected&quot;) into <em>each</em> page a user visits, so can access web page content or listen for user events (the same as other scripts on a page).</li>
+<li>A content script&#39;s activity is limited to the current page, but they can send and receive data from the background via <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#communicating_with_background_scripts">messages</a>.</li>
 </ul>
 </div>
 <div class="col">
 
+<p>👉 Add a new file <code>content.js</code> to the root of your project and paste this code.</p>
 <pre><code class="language-js">// content.js
-console.log(&quot;Hello from content.js&quot;);
-console.log(`Title: ${document.title}`);
+console.log(&quot;💥 Hello from content.js&quot;);
 </code></pre>
-<p>Add a file <code>content.js</code> to the root of your project and paste this code.</p>
-<pre><code class="language-json">&quot;content_scripts&quot;: [{
-    &quot;matches&quot;: [&quot;&lt;all_urls&gt;&quot;],
-    &quot;js&quot;: [&quot;content.js&quot;]
-}],
-</code></pre>
-<p>Update <code>manifest.json</code> to reference the new file by adding the above.</p>
 </div>
 </div>
 
 
-<!-- console.log("Hello from the content script at " + window.location.href); -->
+
+
 
 
 
 
 
 <hr>
-<h2 id="👉-add-a-page-action">👉 Add a page action</h2>
-<p>Browser action | a.k.a. &quot;popup script&quot; appears when a user clicks on the extension icon at the top right of the browser.</p>
-<hr>
-<h2 id="👉-check-the-manifest">👉 Check the manifest</h2>
+<h2 id="check-the-manifest">Check the manifest</h2>
 <div class="twocolumn">
 <div class="col">
 
-<p>Your <code>manifest.json</code> file should now look like this.</p>
+<ul>
+<li>👉 Update <code>manifest.json</code> to reference the new files, <em>before</em> the closing <code>}</code> (curly brace).</li>
+<li>Your <code>manifest.json</code> file should now look like this.</li>
+<li>Refresh your extension at <code>chrome://extensions</code> and go to any page. For example: <a target="_blank" href="https://www.eff.org">eff.org</a></li>
+</ul>
 </div>
 <div class="col">
 
 <pre><code class="language-json">{
-    &quot;name&quot;: &quot;My First Browser Extension&quot;,
-    &quot;description&quot;: &quot;🐌&quot;,
-    &quot;version&quot;: &quot;1.1&quot;,
-    &quot;manifest_version&quot;: 2,
+    &quot;name&quot;: &quot;Explode the Web! Tutorial&quot;,
+    &quot;description&quot;: &quot;🦆&quot;,
+    &quot;version&quot;: &quot;1.2.0&quot;,
+    &quot;manifest_version&quot;: 3,
+
+    &quot;background&quot;: {
+        &quot;service_worker&quot;: &quot;background.js&quot;
+    },
+
     &quot;content_scripts&quot;: [{
         &quot;matches&quot;: [&quot;&lt;all_urls&gt;&quot;],
         &quot;js&quot;: [&quot;content.js&quot;]
-    }],
-    &quot;background&quot;: {
-        &quot;scripts&quot;: [&quot;background.js&quot;]
-    }
+    }]
 }
 </code></pre>
 </div>
@@ -176,25 +169,41 @@ console.log(`Title: ${document.title}`);
 
 
 <hr>
-<h2 id="how-to-debug-an-extension">How to debug an extension</h2>
+<h2 id="👉-debug-an-extension-content-script">👉 Debug an extension content script</h2>
+<p>Besides proof your project is &quot;working&quot;, it is important to be able to see information when it is <em><strong>not working</strong></em>.</p>
 <ol>
-<li>Perhaps the most important thing besides proof your project is &quot;working&quot; is to be able to determine and debug when it is <em>not working</em>.</li>
+<li>On the previous test link, right-click any element on the page and select <strong>Inspect</strong> to open a <a target="_blank" href="https://developer.chrome.com/docs/devtools/open/">DevTools</a> panel like the one below.</li>
+<li>Click on <strong>Console</strong> to confirm you can see your message.</li>
 </ol>
-<p>The content script is injected in the page, so you can see this message in the regular dev tools on any page. To see the message from the background script, click on &quot;Inspect views background page&quot; at <code>chrome://extensions</code></p>
+<img width="800" src="../figures/tutorial-2022/2-2-devtools-content.png">
+
+
+
+
+
+
+
+
 <hr>
-<h2 id="template">TEMPLATE</h2>
-<div class="twocolumn">
-<div class="col">
+<h2 id="👉-debug-an-extension-background-script">👉 Debug an extension background script</h2>
+<p>The content script is injected into each page, so you can see console messages in the regular DevTools.</p>
+<ol>
+<li>To open a new DevTools panel for just the background, go to <code>chrome://extensions</code> and click on &quot;Inspect views service worker&quot;.</li>
+<li>Click on <strong>Console</strong> and confirm you can see your message.</li>
+</ol>
+<img width="800" src="../figures/tutorial-2022/2-2-devtools-background.png">
 
 
 
-</div>
-<div class="col">
 
 
 
-</div>
-</div>
+<hr>
+<h2 id="part-2-conclusion">Part 2 conclusion</h2>
+<ul>
+<li>We added background and content scripts, updated the manifest, and learned how to inspect an extension in Chrome.</li>
+<li>👉 Start the next section <a href="3-dom.html">Document Object Model</a></li>
+</ul>
 
         </div>
     </div>

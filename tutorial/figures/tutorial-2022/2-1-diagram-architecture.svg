@@ -50,8 +50,8 @@
 <text transform="matrix(1 0 0 1 103.4911 232.7107)" class="st0 st3 st7">Injected content script</text>
 <rect x="415.9" y="19" class="st6" width="263.5" height="85.1"/>
 <rect x="412.3" y="36" class="st2" width="270.7" height="56.3"/>
-<text transform="matrix(1 0 0 1 493.2109 56.6201)" class="st0 st3 st4">popup.js</text>
-<text transform="matrix(1 0 0 1 487.1109 81.8201)" class="st0 st3 st7">Browser Action</text>
+<text transform="matrix(1 0 0 1 493.2109 56.6201)" class="st0 st3 st4">action.js</text>
+<text transform="matrix(1 0 0 1 490.9186 81.8201)" class="st0 st3 st7">Browser action</text>
 <g>
 	<line class="st8" x1="415.7" y1="58.6" x2="357" y2="36"/>
 </g>

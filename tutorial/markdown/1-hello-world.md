@@ -91,7 +91,7 @@ The <a target="_blank" href="https://developer.chrome.com/docs/extensions/mv3/ma
 {
 	"name": "My First Browser Extension",
 	"description": "🐌",
-	"version": "1.0",
+	"version": "1.1.0",
 	"manifest_version": 3
 }
 ```
@@ -182,7 +182,7 @@ These are basic steps you repeat will to build and test any extension. Try updat
 {
 	"name": "Explode the Web! Tutorial",
 	"description": "🐢",
-	"version": "1.1",
+	"version": "1.1.1",
 	"manifest_version": 3
 }
 ```
