@@ -42,7 +42,7 @@ Presentation comments ...
 <ol>
 <li>Download and add project assets</li>
 <li>Add a browser action and icons</li>
-<li>Check the trackers on the page</li>
+<li>Test the explosion script</li>
 </ol>
 <hr>
 <h2 id="👉-get-project-assets">👉 Get project assets</h2>
@@ -178,8 +178,8 @@ Presentation comments ...
 
 <ul>
 <li>Let&#39;s go ahead and reference the libraries we need in our manifest.</li>
-<li>Edit your <code>content_script</code> section to look like this, and add <code>web_accessible_resources</code> at the end.</li>
-<li>The full manifest can be referenced here if you prefer to copy and paste:</li>
+<li>Edit the <code>content_script</code> section, and add <code>web_accessible_resources</code> to the end. Refer to the <a target="_blank" href="https://developer.chrome.com/docs/extensions/reference/">documentation</a> for details.</li>
+<li>If you prefer to copy and paste you can get the full <a target="_blank" href="https://github.com/sneakaway-studio/explode-the-web/blob/main/extension/explode-tutorial-3/manifest.json"><code>manifest.json</code></a> on Github.</li>
 </ul>
 </div>
 <div class="col">
@@ -218,27 +218,28 @@ Presentation comments ...
 
 
 <hr>
+<h2 id="👉-test-the-explosion">👉 Test the explosion</h2>
+<img width="400" src="../figures/tutorial-2022/3-2-browser-action.png">
+
+<ul>
+<li>Refresh your extension and click the action icon to see the popup (you may need to click the puzzle piece).</li>
+<li>If everything worked you&#39;ll see a line that says <code>Press e + ~ to test</code>. Before you do that, know that you just need to refresh the page to reset everything.</li>
+</ul>
+<hr>
+<h2 id="explode-the-web">Explode the Web!</h2>
+<p>I don&#39;t know about you but I enjoy this small function immensely. The code that makes this work is not extension-specific, it&#39;s just Javascript. I&#39;ll say two things about it:</p>
+<ul>
+<li>The animation is made possible thanks to <a target="_blank" href="https://animejs.com/">Anime.js</a> library. I highly recommend exploring the examples in the documentation.</li>
+<li>I wrote the <a target="_blank" href="https://github.com/sneakaway-studio/explode-the-web/blob/main/extension/explode-tutorial-final/assets/js/explode.js">code</a> that explodes the page. It is open source, and is fairly simple: grabbing all the html elements on a page, and transforming their position, rotation, and scale using select random numbers.</li>
+</ul>
+<hr>
 <h2 id="part-3-conclusion">Part 3 conclusion</h2>
 <ul>
 <li><p>We made a lot of progress, adding assets with icons, a test page, and</p>
 </li>
-<li><p>👉 Start the next section <a href="3-dom.html">Document Object Model</a></p>
+<li><p>👉 Start the next section <a href="4-explosion.html">Create the Explosion</a></p>
 </li>
 </ul>
-<hr>
-<h2 id="template">TEMPLATE</h2>
-<div class="twocolumn">
-<div class="col">
-
-
-
-</div>
-<div class="col">
-
-
-
-</div>
-</div>
 
         </div>
     </div>
