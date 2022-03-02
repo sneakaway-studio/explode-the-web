@@ -19,7 +19,6 @@ Originally published as a chapter the tutorial has now been updated and improved
 - 2-Architecture and debugging [slides](tutorial/slides/2-archicture.html)
 - 3-Working with the DOM [slides](tutorial/slides/3-dom.html)
 - 4-Create the explosion [slides](tutorial/slides/4-explosion.html)
-- 5-Publishing [slides](tutorial/slides/5-publishing.html)
 
 
 

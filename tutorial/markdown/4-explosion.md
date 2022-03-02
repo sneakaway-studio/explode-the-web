@@ -1,10 +1,10 @@
 <!-- paginate: true -->
 
-# <img width="4%" src="../../extension/explode-tutorial-final/assets/img/explosion-tutorial-icon.svg"> 3-DOM
+# <img width="4%" src="../../extension/explode-tutorial-final/assets/img/explosion-icon.svg"> 4-Explosion
 
-<span class="slides-small"><a href="../slides/3-dom.html">slides</a> | <span class="slides-small"><a href="../markdown/3-dom">markdown</a> | <a href="../www/3-dom.html">HTML</a></span>
+<span class="slides-small"><a href="../slides/4-explosion.html">slides</a> | <span class="slides-small"><a href="../markdown/4-explosion">markdown</a> | <a href="../www/4-explosion.html">HTML</a></span>
 
-<span class="slides-small">[⌂](../../README.md) | [0-Introduction](0-introduction.html) | [1-Hello World!](1-hello-world.html) | [2-Architecture](2-architecture.html) | [3-DOM](3-dom.html) | [4-Explosion](4-explosion.html) | [5-Publishing](5-publishing.html)</span>
+<span class="slides-small">[⌂](../../README.md) | [0-Introduction](0-introduction.html) | [1-Hello World!](1-hello-world.html) | [2-Architecture](2-architecture.html) | [3-DOM](3-dom.html) | [4-Explosion](4-explosion.html)</span>
 
 <!--
 Presentation comments ...

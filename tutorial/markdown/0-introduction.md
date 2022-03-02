@@ -1,12 +1,12 @@
 <!-- paginate: true -->
 
-# <img width="4%" src="../../extension/explode-tutorial-final/assets/img/explosion-tutorial-icon.svg"> Explode the Web!
+# <img width="4%" src="../../extension/explode-tutorial-final/assets/img/explosion-icon.svg"> Explode the Web!
 
 Make a browser extension to destroy web pages that steal your data.
 
 <span class="slides-small"><a href="../slides/0-introduction.html">slides</a> | <span class="slides-small"><a href="../markdown/0-introduction.md">markdown</a> | <a href="../www/0-introduction.html">HTML</a></span>
 
-<span class="slides-small">[⌂](../../README.md) | [0-Introduction](0-introduction.html) | [1-Hello World!](1-hello-world.html) | [2-Architecture](2-architecture.html) | [3-DOM](3-dom.html) | [4-Explosion](4-explosion.html) | [5-Publishing](5-publishing.html)</span>
+<span class="slides-small">[⌂](../../README.md) | [0-Introduction](0-introduction.html) | [1-Hello World!](1-hello-world.html) | [2-Architecture](2-architecture.html) | [3-DOM](3-dom.html) | [4-Explosion](4-explosion.html)</span>
 
 <!--
 Presentation comments ...
