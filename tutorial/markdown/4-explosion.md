@@ -19,6 +19,14 @@ Presentation comments ...
 
 
 
+---
+
+## 👉 Report trackers in the console
+
+With our extension assets ready we can start to build the tracker-tracking function!
+
+1. Open the test page in Chrome `assets/pages/test.html`
+
 
 
 ---
