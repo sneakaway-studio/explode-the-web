@@ -21,12 +21,7 @@ Presentation comments ...
 
 ---
 
-## 👉 Report trackers in the console
-
-With our extension assets ready we can start to build the tracker-tracking function!
-
-1. Open the test page in Chrome `assets/pages/test.html`
-
+Coming soon ...
 
 
 ---
@@ -38,6 +33,24 @@ With our extension assets ready we can start to build the tracker-tracking funct
 
 
 <!--
+
+
+
+// 2. Get scripts
+
+
+// 4. Count trackers
+
+// 5. Add tracker button
+
+// 6. Add explosion countdown
+
+
+
+
+
+
+
 
 ---
 

@@ -89,13 +89,6 @@ function updateTimer() {
 
 // ************** DATA MANIPULATION **************
 
-
-function getScriptsFound(){
-    // get scripts on the page
-    return document.getElementsByTagName("script");
-}
-
-
 /**
  *  Return array of scripts.src that match disconnect trackers
  */

@@ -5,6 +5,14 @@
 
 
 
+TO DO
+
+- Add interaction instructions for console
+- Finish part 4
+
+
+
+
 ---
 
 

@@ -1,14 +1,4 @@
 
-body { background-color: #f4f1de; }
-
-/* https://coolors.co/palette/f4f1de-e07a5f-3d405b-81b29a-f2cc8f */
-.eggshell { color: #f4f1de; }
-.terra-cotta { color: #e07a5f; }
-.independence { color: #3D405B; }
-.green-sheen { color: #81B29A; }
-.deep-champagne { color: #F2CC8F; }
-
-
 .explode-notification {
     position: fixed;
     z-index: 2147483647;

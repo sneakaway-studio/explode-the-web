@@ -23,7 +23,7 @@ Presentation comments ...
 <div class="col">
 
 - Browser extensions are software that add features to a web browser.
-- Some are useful—the [Wayback Machine extension](https://chrome.google.com/webstore/detail/wayback-machine/fpnmgdkabkmnadcjpehmlllkndpkmiak/related?hl=en-US) shows you what a web page looked like in the past, even if it was deleted.
+- Some are useful—the <a target="_blank" href="https://chrome.google.com/webstore/detail/wayback-machine/fpnmgdkabkmnadcjpehmlllkndpkmiak/related?hl=en-US">Wayback Machine extension</a> shows you what a web page looked like in the past, even if it was deleted.
 
 </div>
 <div class="col">
@@ -43,7 +43,7 @@ Presentation comments ...
 <div class="col">
 
 - Extensions can also be playful.
-- [Meow Met](https://chrome.google.com/webstore/detail/meow-met/annljkgbhnihbghkbfammlacnlfkdclp?hl=en) displays a new random image from their collection that contains a cat when you open a new browser tab.
+- <a target="_blank" href="https://chrome.google.com/webstore/detail/meow-met/annljkgbhnihbghkbfammlacnlfkdclp?hl=en">Meow Met</a> displays a new random image from their collection that contains a cat when you open a new browser tab.
 
 </div>
 <div class="col">

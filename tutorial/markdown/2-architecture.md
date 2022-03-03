@@ -1,6 +1,6 @@
 <!-- paginate: true -->
 
-# <img width="4%" src="../../extension/explode-tutorial-final/assets/img/explosion-icon.svg"> 2-Archicture and debugging
+# <img width="4%" src="../../extension/explode-tutorial-final/assets/img/explosion-icon.svg"> 2-Archicture and Debugging
 
 <span class="slides-small"><a href="../slides/2-architecture.html">slides</a> | <span class="slides-small"><a href="../markdown/2-architecture.md">markdown</a> | <a href="../www/2-architecture.html">HTML</a></span>
 
@@ -11,8 +11,8 @@ Presentation comments ...
 -->
 
 1. Extension architecture
-1. Background Scripts
-1. Content Scripts
+1. Background scripts
+1. Content scripts
 1. Debug an extension
 
 
@@ -58,7 +58,7 @@ Presentation comments ...
 <div class="col">
 
 - Background <a target="_blank" href="https://developer.chrome.com/docs/extensions/mv3/service_workers/">service workers</a> are loaded just once, during installation.
-- Background scripts operate continuously, and they can use certain browser APIs like [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) and connect to external APIs or databases.
+- Background scripts operate continuously, and they can use certain browser APIs like <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage">`localStorage`</a> and connect to external APIs or databases.
 - We aren't going to do much with the background, but in a second well see how it is important.
 
 </div>
@@ -72,7 +72,7 @@ Presentation comments ...
 console.log("💥 Hello from background.js");
 ```
 
-<div class="slides-small caption">The "root" means directly to `explode-tutorial` folder so the path = `explode-tutorial/background.js`.</div>
+<div class="slides-small caption">A <a target="_blank" href="https://en.wikipedia.org/wiki/Root_directory">root directory</a> is the bottom- (or top-most) folder in a file structure. Adding a file to "the root of your project folder" means the path will be "explode-tutorial/background.js".</div>
 
 </div>
 </div>
@@ -91,7 +91,7 @@ console.log("💥 Hello from background.js");
 
 - <a target="_blank" href="https://developer.chrome.com/docs/extensions/mv3/content_scripts/">Content scripts</a> run inside web pages that users visit.
 - They are loaded ("injected") into *each* page a user visits, so can access web page content or listen for user events (the same as other scripts on a page).
-- A content script's activity is limited to the current page, but they can send and receive data from the background via [messages](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#communicating_with_background_scripts).
+- A content script's activity is limited to the current page, but they can send and receive data from the background via <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#communicating_with_background_scripts">messages</a>.
 
 </div>
 <div class="col">
@@ -116,14 +116,15 @@ console.log("💥 Hello from content.js");
 
 ---
 
-## Check the manifest
+## Update the manifest
 
 <div class="twocolumn">
 <div class="col">
 
-- 👉 Update `manifest.json` to reference the new files.
-- Manifest files use JSON, which has a strict syntax. If you have issues then try checking your manifest code using [jsonlint.com](https://jsonlint.com/).
-- Refresh your extension at `chrome://extensions` and go to any page. For example: <a target="_blank" href="https://www.eff.org">eff.org</a>
+Manifest files use JSON, which has a strict syntax. If you have issues then try checking your manifest code using <a target="_blank" href="https://jsonlint.com/">jsonlint.com</a>.
+
+1. 👉 Update `manifest.json` to reference the new files.
+1. Refresh your extension at `chrome://extensions`.
 
 </div>
 <div class="col">
@@ -160,15 +161,16 @@ console.log("💥 Hello from content.js");
 
 ## 👉 Debug an extension content script
 
+To find proof the extension is "working" and that the content script has loaded:
 
-Besides proof your project is "working", it is important to be able to see information when it is ***not working***.
-
-1. On the previous test link, right-click any element on the page and select **Inspect** to open a <a target="_blank" href="https://developer.chrome.com/docs/devtools/open/">DevTools</a> panel like the one below.
+1. Open any web page, for example: <a target="_blank" href="https://www.eff.org">eff.org</a>
+1. Right-click on the page and select **Inspect** to open the <a target="_blank" href="https://developer.chrome.com/docs/devtools/open/">DevTools</a> panel.
 1. Click on **Console** to confirm you can see your message.
 
 <img width="800" src="../figures/tutorial-2022/2-2-devtools-content.png">
 
 
+<div class="slides-small caption">The DevTools console will also display errors and warnings to let you know when a script is <b><i>not working</i></b>.</div>
 
 
 
@@ -179,10 +181,9 @@ Besides proof your project is "working", it is important to be able to see infor
 
 ## 👉 Debug an extension background script
 
+Content scripts are injected into each page, but you can also view messages from the scripts running in the background using DevTools:
 
-The content script is injected into each page, so you can see console messages in the regular DevTools.
-
-1. To open a new DevTools panel for just the background, go to `chrome://extensions` and click on "Inspect views service worker".
+1. Go to `chrome://extensions` and click on "Inspect views service worker".
 1. Click on **Console** and confirm you can see your message.
 
 <img width="800" src="../figures/tutorial-2022/2-2-devtools-background.png">

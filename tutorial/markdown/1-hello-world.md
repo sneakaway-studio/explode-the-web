@@ -27,9 +27,9 @@ Presentation comments ...
 <div class="col">
 
 - Like all web pages, extensions are built using HTML, CSS, and Javascript code.
-- [HTML](https://www.w3schools.com/html/default.asp) (HyperText Markup Language) structures content for the web.
-- [CSS](https://www.w3schools.com/css/default.asp) (Cascading StyleSheets) control the presentation of content.
-- [JS](https://www.w3schools.com/js/default.asp) (Javascript) is the programming language for web pages.
+- <a target="_blank" href="https://www.w3schools.com/html/default.asp">HTML</a> (HyperText Markup Language) structures content for the web.
+- <a target="_blank" href="https://www.w3schools.com/css/default.asp">CSS</a> (Cascading StyleSheets) control the presentation of content.
+- <a target="_blank" href="https://www.w3schools.com/js/default.asp">JS</a> (Javascript) is the programming language for web pages.
 - This simple example will look like:
 > <p>This is a <span style="color:red">paragraph</span></p>
 

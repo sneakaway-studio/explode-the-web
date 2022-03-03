@@ -25,7 +25,7 @@ Presentation comments ...
 <div class="twocolumn">
 <div class="col">
 
-1. Download the [`assets.zip`](https://github.com/sneakaway-studio/explode-the-web/tree/main/extension) file you'll need to continue the tutorial.
+1. Download the <a target="_blank" href="https://github.com/sneakaway-studio/explode-the-web/tree/main/extension">`assets.zip`</a> file you'll need to continue the tutorial.
 1. Unzip the folder and place it in your `explode-tutorial` project folder.
 1. Your structure should look like this >
 
@@ -62,7 +62,7 @@ Presentation comments ...
 <div class="twocolumn">
 <div class="col">
 
-- An [action](https://developer.chrome.com/docs/extensions/reference/action/) adds an extension icon and popup window to the browser toolbar.
+- An <a target="_blank" href="https://developer.chrome.com/docs/extensions/reference/action/">action</a> adds an extension icon and popup window to the browser toolbar.
 - The action is sometimes called "browser action", or "popup script".
 - The action popup is an HTML page you define and has its own context (and its own DevTools console!).
 
@@ -125,8 +125,10 @@ Presentation comments ...
 <div class="twocolumn">
 <div class="col">
 
-- The icon identifies the browser extension in the `chrome://extensions` page.
-- Add this code to your manifest to add the icon and action and refresh the extension.
+The icon identifies the browser extension in the `chrome://extensions` page.
+
+1. Add this code to your manifest to add the icon and action.
+1. Refresh the extension.
 
 </div>
 <div class="col">
@@ -164,9 +166,10 @@ Presentation comments ...
 <div class="twocolumn">
 <div class="col">
 
-- Let's go ahead and reference the libraries we need in our manifest.
-- Edit the `content_script` section, and add `web_accessible_resources` to the end. Refer to the <a target="_blank" href="https://developer.chrome.com/docs/extensions/reference/">documentation</a> for details.
-- If you prefer to copy and paste you can get the full <a target="_blank" href="https://github.com/sneakaway-studio/explode-the-web/blob/main/extension/explode-tutorial-3/manifest.json">`manifest.json`</a> on Github.
+Let's go ahead and reference the libraries we need in our manifest.
+
+1. Edit the `content_script` section, and add `web_accessible_resources` to the end. See <a target="_blank" href="https://developer.chrome.com/docs/extensions/reference/">documentation</a> for details.
+1. If you prefer to copy and paste you can get the full <a target="_blank" href="https://github.com/sneakaway-studio/explode-the-web/blob/main/extension/explode-tutorial-3/manifest.json">`manifest.json`</a> on Github.
 
 </div>
 <div class="col">
@@ -212,8 +215,9 @@ Presentation comments ...
 
 <img width="400" src="../figures/tutorial-2022/3-2-browser-action.png">
 
-- Refresh your extension and click the action icon to see the popup (you may need to click the puzzle piece).
-- If everything worked you'll see a line that says `Press e + ~ to test`. Before you do that, know that you just need to refresh the page to reset everything.
+- Refresh your extension and click the action icon to see the popup (you may need to click the puzzle piece see or pin it).
+- If everything worked you'll see a line that says `Press e + ~ to test`.
+- Before you test, know that you can reset the page by clicking reload.
 
 
 
@@ -225,10 +229,107 @@ Presentation comments ...
 
 ## Explode the Web!
 
-I don't know about you but I enjoy this small function immensely. The code that makes this work is not extension-specific, it's just Javascript. I'll say two things about it:
+I don't know about you but I enjoy this small function immensely.
+
+<img width="400" src="../figures/tutorial-2022/3-3-exploded-nytimes.png"> <img width="400" src="../figures/tutorial-2022/3-3-exploded-cnn.png">
+
+
+---
+
+## Explode the Web!
+
+The code that makes this work is just Javascript. I'll say two things about it:
 
 - The animation is made possible thanks to <a target="_blank" href="https://animejs.com/">Anime.js</a> library. I highly recommend exploring the examples in the documentation.
-- I wrote the <a target="_blank" href="https://github.com/sneakaway-studio/explode-the-web/blob/main/extension/explode-tutorial-final/assets/js/explode.js">code</a> that explodes the page. It is open source, and is fairly simple: grabbing all the html elements on a page, and transforming their position, rotation, and scale using select random numbers.
+- I wrote the <a target="_blank" href="https://github.com/sneakaway-studio/explode-the-web/blob/main/extension/explode-tutorial-final/assets/js/explode.js">code</a> that explodes the page. It is open source, and is fairly simple: grabbing all the html elements on a page, and transforming their position, rotation, and scale using random numbers.
+
+
+
+
+
+
+
+---
+
+## 👉 The document object model
+
+With our extension assets ready we can start to build the tracker-tracking function!
+
+1. Add this code to `content.js`
+1. Save the file and refresh the extension
+1. Open the test page in Chrome [`assets/pages/test.html`](`../../extension/extension-tutorial-final/pages/test.html`) and open the console.
+
+```js
+$(document).ready(() => {
+    console.log(`💥 The page title is ${document.title}`);
+});
+```
+
+
+
+---
+
+## The document object model
+
+<div class="twocolumn">
+<div class="col">
+
+- The code you added will let you see the title of any page in the console.
+- This is possible because browsers load the text of web pages as nested elements, or "nodes".
+- This "document object model" or DOM allows us to get (or set!) the attributes of any element via its path in the hierarchy.
+
+</div>
+<div class="col">
+
+<img width="600" src="../figures/tutorial-2022/3-4-dom.svg">
+
+</div>
+</div>
+
+
+
+
+---
+
+## 👉 Change the DOM in the console
+
+<div class="twocolumn">
+<div class="col">
+
+The console is interactive, so you can even test this on a live page.
+
+1. Paste this into the console
+1. Press return
+1. Try <a target="_blank" href="https://www.w3schools.com/tags/ref_colornames.asp">other color names</a>
+
+</div>
+<div class="col">
+
+```js
+document.body.style.backgroundColor = "red";
+```
+
+</div>
+</div>
+
+
+
+
+
+---
+
+## 👉 Get script elements using the DOM
+
+1. Add this code to `content.js` just under the `console.log` function and before the closing `});` to store a reference to all the script elements on each page.
+1. Refresh the extension, reload the test page, and you should see all script elements appear in the console as an `HTMLCollection`.
+
+```js
+var scriptsFoundArr = document.getElementsByTagName("script");
+console.log(scriptsFoundArr);
+```
+
+
+
 
 
 
@@ -237,6 +338,6 @@ I don't know about you but I enjoy this small function immensely. The code that 
 
 ## Part 3 conclusion
 
-- We made a lot of progress, adding assets with icons, a test page, and
-
+- We made a lot of progress in this section, adding assets with icons and a test page, hooking up the explode test function, and using the DOM to get scripts.
+- In the next section we'll look at these elements and check if they are connecting to tracker domains.
 - 👉 Start the next section [Create the Explosion](4-explosion.html)

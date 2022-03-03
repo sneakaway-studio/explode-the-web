@@ -1,30 +1,12 @@
 // content.js
 console.log("💥 Hello from content.js");
 
-// 1. Add hello world ^
-
-// 2. Add explosion keypress test
-
-// 3. Add explosion timer test
-
-// 4. Count trackers
-
-// 5. Add tracker button
-
-// 6. Add explosion countdown
-
-
-
-
-
-
-
 $(document).ready(() => {
     console.log(`💥 The page title is ${document.title}`);
-    console.log(`💥 The url is ${window.location.href}`);
 
     // get scripts on the page
-    var scriptsFoundArr = getScriptsFound();
+    var scriptsFoundArr = document.getElementsByTagName("script");
+    // console.log(scriptsFoundArr);
 
     // get trackers
     let trackersFoundArr = getTrackersFound(scriptsFoundArr);

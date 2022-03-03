@@ -50,7 +50,7 @@ Presentation comments ...
 <div class="col">
 
 <ol>
-<li>Download the <a href="https://github.com/sneakaway-studio/explode-the-web/tree/main/extension"><code>assets.zip</code></a> file you&#39;ll need to continue the tutorial.</li>
+<li>Download the <a target="_blank" href="https://github.com/sneakaway-studio/explode-the-web/tree/main/extension"><code>assets.zip</code></a> file you&#39;ll need to continue the tutorial.</li>
 <li>Unzip the folder and place it in your <code>explode-tutorial</code> project folder.</li>
 <li>Your structure should look like this &gt;</li>
 </ol>
@@ -84,7 +84,7 @@ Presentation comments ...
 <div class="col">
 
 <ul>
-<li>An <a href="https://developer.chrome.com/docs/extensions/reference/action/">action</a> adds an extension icon and popup window to the browser toolbar.</li>
+<li>An <a target="_blank" href="https://developer.chrome.com/docs/extensions/reference/action/">action</a> adds an extension icon and popup window to the browser toolbar.</li>
 <li>The action is sometimes called &quot;browser action&quot;, or &quot;popup script&quot;.</li>
 <li>The action popup is an HTML page you define and has its own context (and its own DevTools console!).</li>
 </ul>
@@ -140,10 +140,11 @@ Presentation comments ...
 <div class="twocolumn">
 <div class="col">
 
-<ul>
-<li>The icon identifies the browser extension in the <code>chrome://extensions</code> page.</li>
-<li>Add this code to your manifest to add the icon and action and refresh the extension.</li>
-</ul>
+<p>The icon identifies the browser extension in the <code>chrome://extensions</code> page.</p>
+<ol>
+<li>Add this code to your manifest to add the icon and action.</li>
+<li>Refresh the extension.</li>
+</ol>
 </div>
 <div class="col">
 
@@ -176,11 +177,11 @@ Presentation comments ...
 <div class="twocolumn">
 <div class="col">
 
-<ul>
-<li>Let&#39;s go ahead and reference the libraries we need in our manifest.</li>
-<li>Edit the <code>content_script</code> section, and add <code>web_accessible_resources</code> to the end. Refer to the <a target="_blank" href="https://developer.chrome.com/docs/extensions/reference/">documentation</a> for details.</li>
+<p>Let&#39;s go ahead and reference the libraries we need in our manifest.</p>
+<ol>
+<li>Edit the <code>content_script</code> section, and add <code>web_accessible_resources</code> to the end. See <a target="_blank" href="https://developer.chrome.com/docs/extensions/reference/">documentation</a> for details.</li>
 <li>If you prefer to copy and paste you can get the full <a target="_blank" href="https://github.com/sneakaway-studio/explode-the-web/blob/main/extension/explode-tutorial-3/manifest.json"><code>manifest.json</code></a> on Github.</li>
-</ul>
+</ol>
 </div>
 <div class="col">
 
@@ -222,23 +223,92 @@ Presentation comments ...
 <img width="400" src="../figures/tutorial-2022/3-2-browser-action.png">
 
 <ul>
-<li>Refresh your extension and click the action icon to see the popup (you may need to click the puzzle piece).</li>
-<li>If everything worked you&#39;ll see a line that says <code>Press e + ~ to test</code>. Before you do that, know that you just need to refresh the page to reset everything.</li>
+<li>Refresh your extension and click the action icon to see the popup (you may need to click the puzzle piece see or pin it).</li>
+<li>If everything worked you&#39;ll see a line that says <code>Press e + ~ to test</code>.</li>
+<li>Before you test, know that you can reset the page by clicking reload.</li>
 </ul>
 <hr>
 <h2 id="explode-the-web">Explode the Web!</h2>
-<p>I don&#39;t know about you but I enjoy this small function immensely. The code that makes this work is not extension-specific, it&#39;s just Javascript. I&#39;ll say two things about it:</p>
+<p>I don&#39;t know about you but I enjoy this small function immensely.</p>
+<p><img width="400" src="../figures/tutorial-2022/3-3-exploded-nytimes.png"> <img width="400" src="../figures/tutorial-2022/3-3-exploded-cnn.png"></p>
+<hr>
+<h2 id="explode-the-web-1">Explode the Web!</h2>
+<p>The code that makes this work is just Javascript. I&#39;ll say two things about it:</p>
 <ul>
 <li>The animation is made possible thanks to <a target="_blank" href="https://animejs.com/">Anime.js</a> library. I highly recommend exploring the examples in the documentation.</li>
-<li>I wrote the <a target="_blank" href="https://github.com/sneakaway-studio/explode-the-web/blob/main/extension/explode-tutorial-final/assets/js/explode.js">code</a> that explodes the page. It is open source, and is fairly simple: grabbing all the html elements on a page, and transforming their position, rotation, and scale using select random numbers.</li>
+<li>I wrote the <a target="_blank" href="https://github.com/sneakaway-studio/explode-the-web/blob/main/extension/explode-tutorial-final/assets/js/explode.js">code</a> that explodes the page. It is open source, and is fairly simple: grabbing all the html elements on a page, and transforming their position, rotation, and scale using random numbers.</li>
 </ul>
+<hr>
+<h2 id="👉-the-document-object-model">👉 The document object model</h2>
+<p>With our extension assets ready we can start to build the tracker-tracking function!</p>
+<ol>
+<li>Add this code to <code>content.js</code></li>
+<li>Save the file and refresh the extension</li>
+<li>Open the test page in Chrome <a href="%60../../extension/extension-tutorial-final/pages/test.html%60"><code>assets/pages/test.html</code></a> and open the console.</li>
+</ol>
+<pre><code class="language-js">$(document).ready(() =&gt; {
+    console.log(`💥 The page title is ${document.title}`);
+});
+</code></pre>
+<hr>
+<h2 id="the-document-object-model">The document object model</h2>
+<div class="twocolumn">
+<div class="col">
+
+<ul>
+<li>The code you added will let you see the title of any page in the console.</li>
+<li>This is possible because browsers load the text of web pages as nested elements, or &quot;nodes&quot;.</li>
+<li>This &quot;document object model&quot; or DOM allows us to get (or set!) the attributes of any element via its path in the hierarchy.</li>
+</ul>
+</div>
+<div class="col">
+
+<img width="600" src="../figures/tutorial-2022/3-4-dom.svg">
+
+</div>
+</div>
+
+
+
+
+<hr>
+<h2 id="👉-change-the-dom-in-the-console">👉 Change the DOM in the console</h2>
+<div class="twocolumn">
+<div class="col">
+
+<p>The console is interactive, so you can even test this on a live page.</p>
+<ol>
+<li>Paste this into the console</li>
+<li>Press return</li>
+<li>Try <a target="_blank" href="https://www.w3schools.com/tags/ref_colornames.asp">other color names</a></li>
+</ol>
+</div>
+<div class="col">
+
+<pre><code class="language-js">document.body.style.backgroundColor = &quot;red&quot;;
+</code></pre>
+</div>
+</div>
+
+
+
+
+
+<hr>
+<h2 id="👉-get-script-elements-using-the-dom">👉 Get script elements using the DOM</h2>
+<ol>
+<li>Add this code to <code>content.js</code> just under the <code>console.log</code> function and before the closing <code>});</code> to store a reference to all the script elements on each page.</li>
+<li>Refresh the extension, reload the test page, and you should see all script elements appear in the console as an <code>HTMLCollection</code>.</li>
+</ol>
+<pre><code class="language-js">var scriptsFoundArr = document.getElementsByTagName(&quot;script&quot;);
+console.log(scriptsFoundArr);
+</code></pre>
 <hr>
 <h2 id="part-3-conclusion">Part 3 conclusion</h2>
 <ul>
-<li><p>We made a lot of progress, adding assets with icons, a test page, and</p>
-</li>
-<li><p>👉 Start the next section <a href="4-explosion.html">Create the Explosion</a></p>
-</li>
+<li>We made a lot of progress in this section, adding assets with icons and a test page, hooking up the explode test function, and using the DOM to get scripts.</li>
+<li>In the next section we&#39;ll look at these elements and check if they are connecting to tracker domains.</li>
+<li>👉 Start the next section <a href="4-explosion.html">Create the Explosion</a></li>
 </ul>
 
         </div>
