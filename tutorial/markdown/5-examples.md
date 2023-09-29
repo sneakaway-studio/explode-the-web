@@ -18,14 +18,12 @@ Presentation comments ...
 
 <small>
 
-Abstract Browsing by Rafaël Rozendaal https://goo.gl/BtPkmw 
-Self Surfing by Jonas Lund https://goo.gl/bh3MGZ 
-Go Rando by Ben Grosser http://bengrosser.com/projects/go-rando 
-Text Free Browsing by Jonas Lund and Rafael Rozendaal http://textfreebrowsing.com 
-Washing Machine by joak https://goo.gl/fxAVAg 
-Locomotive by joak https://goo.gl/Ar5wcf 
-Mirror by joak https://goo.gl/SPDc6K 
-Lamp by joak https://goo.gl/J29KfV 
+Tim Holman [New Tab - What have you made today?](https://github.com/tholman/what-have-you-made-today)
+Rafaël Rozendaal [Abstract Browsing](https://goo.gl/BtPkmw) 
+Jonas Lund [Self Surfing](https://goo.gl/bh3MGZ) 
+Ben Grosser [Go Rando](http://bengrosser.com/projects/go-rando) 
+Jonas Lund and Rafael Rozendaal [Text Free Browsing](http://textfreebrowsing.com) 
+joak [Washing Machine](https://goo.gl/fxAVAg) | [Locomotive](https://goo.gl/Ar5wcf) | [Mirror](https://goo.gl/SPDc6K) | [Lamp](https://goo.gl/J29KfV) 
 The Deletionist by Amaranth Borsuk, Jesper Juul and Nick Montfort  http://thedeletionist.com 
 u-infinity by Hannah Newman https://goo.gl/fmJbMp 
 Magic Nub by Chino Kim https://goo.gl/5KFP2n 
