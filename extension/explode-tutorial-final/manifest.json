@@ -1,7 +1,10 @@
 {
     "name": "Explode the Web!",
+	"short_name": "Explode the Web!",
     "description": "Explode web pages that contain data trackers!",
     "version": "1.4.0",
+	"author": "Sneakaway Studio",
+
     "manifest_version": 3,
 
     "icons": {
@@ -18,10 +21,6 @@
         },
         "default_title": "Explode Tracked Web Pages!",
         "default_popup": "action.html"
-    },
-
-    "background": {
-        "service_worker": "background.js"
     },
 
     "content_scripts": [{
@@ -43,11 +42,23 @@
         "all_frames": true
     }],
 
+	"content_security_policy": {
+		"extension_pages": "script-src 'self'; object-src 'self'"
+	},
+
     "permissions": [],
 
     "web_accessible_resources": [{
         "resources": ["*.svg", "*.mp3"],
         "matches": ["<all_urls>"],
         "use_dynamic_url": true
-    }]
+    }],
+
+	"browser_specific_settings": {
+        "gecko": {
+            "id": "{533301f3-929b-419a-b3e9-02b7b2f0ac74}",
+            "strict_min_version": "109.0"
+        }
+	}
+
 }
