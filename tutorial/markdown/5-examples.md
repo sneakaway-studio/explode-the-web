@@ -20,15 +20,14 @@ Presentation comments ...
 
 Tim Holman [New Tab - What have you made today?](https://github.com/tholman/what-have-you-made-today)
 Rafaël Rozendaal [Abstract Browsing](https://goo.gl/BtPkmw) 
-Jonas Lund [Self Surfing](https://goo.gl/bh3MGZ) 
 Ben Grosser [Go Rando](http://bengrosser.com/projects/go-rando) 
-Jonas Lund and Rafael Rozendaal [Text Free Browsing](http://textfreebrowsing.com) 
 joak [Washing Machine](https://goo.gl/fxAVAg) | [Locomotive](https://goo.gl/Ar5wcf) | [Mirror](https://goo.gl/SPDc6K) | [Lamp](https://goo.gl/J29KfV) 
 The Deletionist by Amaranth Borsuk, Jesper Juul and Nick Montfort  http://thedeletionist.com 
 u-infinity by Hannah Newman https://goo.gl/fmJbMp 
 Magic Nub by Chino Kim https://goo.gl/5KFP2n 
 Occupy The Internet, Phase 3 by Greg Leuch http://fffff.at/occupy-internet-extensions 
 G.R.E.E.D. by Greg Leuch http://fffff.at/g-r-e-e-d 
+Mittons Romney by Theo Watson http://fffff.at/mittens-romney-extension 
 
 </small>
 
@@ -39,7 +38,6 @@ G.R.E.E.D. by Greg Leuch http://fffff.at/g-r-e-e-d
 
 <small>
 
-Mittons Romney by Theo Watson http://fffff.at/mittens-romney-extension 
 Kardashian Krypt by Maddy Varner http://fffff.at/kardashian-krypt 
 Shaved Bieber Updates by Greg Leuch http://fffff.at/shaved-bieber-updates 
 The Ethical Ad Blocker by Darius Kazemi https://goo.gl/LBRb8L 
@@ -47,7 +45,6 @@ Adnauseum by Daniel C. Howe, Mushon Zer-Aviv, Helen Nissenbaum https://adnauseam
 Non Views by Dries Depoorter https://driesdepoorter.be/nonviews 
 Dragons by James Bridle http://jamesbridle.com/works/dragons 
 Katamari Hack by Alex Leone, David Nufer, David Truong http://kathack.com 
-Zwarte Piet is Journalistiek by Luis Rodil-Fernández https://goo.gl/KQ4RXf 
 Opinions Are My Own by Leon Eckert https://leoneckert.com/projects/opinions-are-my-own/
 Browser Surprise by Leon Eckert https://leoneckert.com/projects/browser-surprise/
 [Ethical Ad Blocker](http://tinysubversions.com/notes/ethical-ad-blocker) by Darius Kazemi
