@@ -179,7 +179,6 @@ Let's go ahead and reference the libraries we need in our manifest.
     "matches": ["<all_urls>"],
     "js": [
         "assets/libs/anime.min-3.2.0.js",
-        "assets/libs/jquery-3.6.0.min.js",
         "assets/libs/purify-2.3.4.js",
         "assets/js/disconnect-tracking-services.js",
         "assets/js/functions.js",
@@ -260,9 +259,7 @@ With our extension assets ready we can start to build the tracker-tracking funct
 1. Open the test page in Chrome [`assets/pages/test.html`](`../../extension/extension-tutorial-final/pages/test.html`) and open the console.
 
 ```js
-$(document).ready(() => {
-    console.log(`💥 The page title is ${document.title}`);
-});
+console.log(`💥 The page title is ${document.title}`);
 ```
 
 

@@ -1,6 +1,9 @@
 
 ## CHANGELOG
 
+2026-Feb
+- Replace jquery with vanilla JS in tutorial and final extension
+
 2023-Sep
 - Adds examples
 

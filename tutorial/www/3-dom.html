@@ -189,7 +189,6 @@ Presentation comments ...
     &quot;matches&quot;: [&quot;&lt;all_urls&gt;&quot;],
     &quot;js&quot;: [
         &quot;assets/libs/anime.min-3.2.0.js&quot;,
-        &quot;assets/libs/jquery-3.6.0.min.js&quot;,
         &quot;assets/libs/purify-2.3.4.js&quot;,
         &quot;assets/js/disconnect-tracking-services.js&quot;,
         &quot;assets/js/functions.js&quot;,
@@ -201,7 +200,7 @@ Presentation comments ...
         &quot;assets/css/styles.css&quot;
     ],
     &quot;run_at&quot;: &quot;document_end&quot;,
-    &quot;all_frames&quot;: true
+    &quot;all_frames&quot;: false
 }],
 
 &quot;web_accessible_resources&quot;: [{
@@ -246,9 +245,7 @@ Presentation comments ...
 <li>Save the file and refresh the extension</li>
 <li>Open the test page in Chrome <a href="%60../../extension/extension-tutorial-final/pages/test.html%60"><code>assets/pages/test.html</code></a> and open the console.</li>
 </ol>
-<pre><code class="language-js">$(document).ready(() =&gt; {
-    console.log(`💥 The page title is ${document.title}`);
-});
+<pre><code class="language-js">console.log(`💥 The page title is ${document.title}`);
 </code></pre>
 <hr>
 <h2 id="the-document-object-model">The document object model</h2>
