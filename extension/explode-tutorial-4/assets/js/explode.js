@@ -22,14 +22,15 @@ function explodeThePage() {
 			return Math.random() * randomRange(-360, 360);
 		},
 		translateX: function() {
-			return Math.random() * randomRange(-50,50);
+			return Math.random() * randomRange(-100,100);
 		},
 		translateY: function() {
-			return Math.random() * randomRange(-50,50);
+			return Math.random() * randomRange(-100,100);
 		},
 		scale: function() {
-			return Math.random() * 2;
-		}
+			return Math.random() * 3;
+		},
+        easing: 'spring(1, 80, 10, 0)'
 	});
 	// explode main nodes just a little
 	anime({
@@ -42,7 +43,8 @@ function explodeThePage() {
 		},
 		translateY: function() {
 			return Math.random() * 40;
-		}
+        },
+        easing: 'spring(1, 80, 10, 0)'
 	});
 	// add audio to play explosion sound
 	var audio = new Audio(chrome.runtime.getURL('assets/sounds/explode.mp3'));
