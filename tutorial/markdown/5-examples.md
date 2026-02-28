@@ -47,6 +47,7 @@ Leon Eckert [Opinions Are My Own](https://leoneckert.com/projects/opinions-are-m
 Tim Holman [What have you made today?](https://github.com/tholman/what-have-you-made-today)
 Owen Mundy, Joelle Dietrick, et al [Tally Saves the Internet](https://tallysavestheinternet.com/) (2021) 
 Theo Watson [Mittons Romney](http://fffff.at/mittens-romney-extension) (2012)
+Tega Brain [Slop Evader](https://tegabrain.com/Slop-Evader) 
 
 </small>
 
