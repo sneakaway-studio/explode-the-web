@@ -27,7 +27,6 @@
         "matches": ["<all_urls>"],
         "js": [
             "assets/libs/anime.min-3.2.0.js",
-            "assets/libs/jquery-3.6.0.min.js",
             "assets/libs/purify-2.3.4.js",
             "assets/js/disconnect-tracking-services.js",
             "assets/js/functions.js",
@@ -39,7 +38,7 @@
             "assets/css/styles.css"
         ],
         "run_at": "document_end",
-        "all_frames": true
+        "all_frames": false
     }],
 
 	"content_security_policy": {

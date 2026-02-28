@@ -191,7 +191,7 @@ Let's go ahead and reference the libraries we need in our manifest.
         "assets/css/styles.css"
     ],
     "run_at": "document_end",
-    "all_frames": true
+    "all_frames": false
 }],
 
 "web_accessible_resources": [{
