@@ -2,6 +2,7 @@
  * 	Functions for explode-the-web (keeping the tutorial simple)
  */
 
+let explodeCounter = document.querySelector('.explode-counter');
 
 
 // ************** UI STATES **************
@@ -15,30 +16,19 @@ let intervalObj;
 
 
 
-// ************** EVENT LISTENERS **************
-
-// if the user clicks on the element
-$(document).on('click', '.explode-notification', function() {
-    // and display the list
-    $('.explode-tracker-list').toggle();
-});
-
-
-
 // ************** TIMER FUNCTIONS **************
 
 function startExplosionCountdown(duration = 10) {
+    if (!explodeCounter) explodeCounter = document.querySelector('.explode-counter');
     // set explosion timer duration
     timeUntilExplode = duration;
     // start timer
     intervalObj = setInterval(updateTimer, 1000);
     // add explosion image
-    $('.explode-counter').css({
-        "background": "url(" + chrome.runtime.getURL("assets/img/explosion-ui.svg") + ")",
-        "cursor": "pointer"
-    });
+    explodeCounter.style.backgroundImage = "url(" + chrome.runtime.getURL("assets/img/explosion-ui.svg") + ")";
+    explodeCounter.style.cursor = "pointer";
     // add click listener if user wants to cancel
-    $(document).on('click', '.explode-counter', function() {
+    explodeCounter.addEventListener('click', function() {
         // if time left
         if (timeUntilExplode > 0) {
             // and explode isn't already paused
@@ -70,7 +60,7 @@ function updateTimer() {
         // subtract by 1
         timeUntilExplode--;
         // display result in browser
-        $('.explode-counter-text').html(DOMPurify.sanitize(String(timeUntilExplode)));
+        document.querySelector('.explode-counter-text').innerHTML = DOMPurify.sanitize(String(timeUntilExplode));
         // update title text
         displayExplodeTitleHtml("Click to cancel");
     }
@@ -135,12 +125,13 @@ function displayTrackerList(trackersFoundArr) {
     </div>
     `;
     // append html to loaded web page
-    $('body').append(DOMPurify.sanitize(str));
+    document.body.insertAdjacentHTML('beforeend', DOMPurify.sanitize(str));
 }
 // change title attribute text
 function displayExplodeTitleHtml(status) {
     let attr = "this page will explode in [" + timeUntilExplode + "] seconds. " + status;
-    $('.explode-counter').attr('title', DOMPurify.sanitize(attr));
+    if (!explodeCounter) explodeCounter = document.querySelector('.explode-counter');
+    explodeCounter.setAttribute('title', DOMPurify.sanitize(attr));
 }
 
 
