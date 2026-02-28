@@ -11,10 +11,10 @@ var keys = {
 /**
  * 	If keydown detected
  */
-$(document.body).keydown(function(event) {
-    if (event.keyCode == 69) // e
+document.addEventListener("keydown", function(event) {
+    if (event.code == 69) // e
         keys.e = true;
-    else if (event.keyCode == 192) // ~
+    else if (event.code == 192) // ~
         keys.tilda = true;
     if (keys.e && keys.tilda) {
         console.log("e + tilda ~");
@@ -25,11 +25,11 @@ $(document.body).keydown(function(event) {
 /**
  * 	Reset keys that are no longer pressed
  */
-$(document.body).keyup(function(event) {
+document.addEventListener("keyup", function(event) {
     // reset status of the button 'released' == 'false'
-    if (event.keyCode == 69)
+    if (event.code == 69)
         keys.e = false;
-    else if (event.keyCode == 192)
+    else if (event.code == 192)
         keys.tilda = false;
     //console.log(event.keyCode,keys);
 });
