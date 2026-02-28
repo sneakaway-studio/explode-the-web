@@ -24,11 +24,9 @@
         "author": "Owen Mundy",
         "title": "Explode the Web!",
         "keywords": "computing, proficiency, browser extensions",
+
         "allowLocalFiles": true,
         "html": true,
-        "inputDir": "tutorial/markdown",
-        "output": "tutorial/slides",
-        "watch": false,
         "bespoke": {
             "progress": true
         },
@@ -36,12 +34,19 @@
         "themeSet": [
             "tutorial/assets/css/slide-styles.css"
         ],
-        "minifyCSS": false,
+        "options": {
         "script": {
             "source": [
                 "tutorial/assets/js/"
             ]
         }
+
+        },
+        
+        "inputDir": "tutorial/markdown",
+        "output": "tutorial/slides",
+        "watch": false,
+        "minifyCSS": false
     },
     "devDependencies": {
         "grunt": "^1.5.3",

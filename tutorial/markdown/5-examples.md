@@ -14,49 +14,48 @@ Presentation comments ...
 
 ---
 
-## Artistic Examples - 1
+## Examples - 1
 
 <small>
 
-Tim Holman [New Tab - What have you made today?](https://github.com/tholman/what-have-you-made-today)
-Rafaël Rozendaal [Abstract Browsing](https://goo.gl/BtPkmw) 
+Steve Lambert, et al [add-art.org](https://add-art.org) (2011)
+ArtTab [arttab.xyz](https://arttab.xyz) (2023)
+Darius Kazemi [Ethical Ad Blocker](http://tinysubversions.com/notes/ethical-ad-blocker) (2015)
+James Bridle [Dragons](http://jamesbridle.com/works/dragons) (2013)
+Rafaël Rozendaal and Reinier Feijen [Abstract Browsing](https://goo.gl/BtPkmw) (2014) 
 Ben Grosser [Go Rando](http://bengrosser.com/projects/go-rando) 
-joak [Washing Machine](https://goo.gl/fxAVAg) | [Locomotive](https://goo.gl/Ar5wcf) | [Mirror](https://goo.gl/SPDc6K) | [Lamp](https://goo.gl/J29KfV) 
-The Deletionist by Amaranth Borsuk, Jesper Juul and Nick Montfort  http://thedeletionist.com 
-u-infinity by Hannah Newman https://goo.gl/fmJbMp 
-Magic Nub by Chino Kim https://goo.gl/5KFP2n 
-Occupy The Internet, Phase 3 by Greg Leuch http://fffff.at/occupy-internet-extensions 
-G.R.E.E.D. by Greg Leuch http://fffff.at/g-r-e-e-d 
-Mittons Romney by Theo Watson http://fffff.at/mittens-romney-extension 
+joak [Washing Machine](https://goo.gl/fxAVAg) (2017), [Locomotive](https://goo.gl/Ar5wcf) (2019), [Mirror](https://goo.gl/SPDc6K) (2017), [Lamp](https://goo.gl/J29KfV) (2017)
+Amaranth Borsuk, Jesper Juul and Nick Montfort [thedeletionist.com](http://thedeletionist.com) 
+Hannah Newman [u-infinity](https://goo.gl/fmJbMp) 
+Chino Kim [Magic Nub](https://goo.gl/5KFP2n) 
 
 </small>
 
-
 ---
 
-## Artistic Examples - 2
+## Examples - 2
 
 <small>
 
-Kardashian Krypt by Maddy Varner http://fffff.at/kardashian-krypt 
-Shaved Bieber Updates by Greg Leuch http://fffff.at/shaved-bieber-updates 
-The Ethical Ad Blocker by Darius Kazemi https://goo.gl/LBRb8L 
-Adnauseum by Daniel C. Howe, Mushon Zer-Aviv, Helen Nissenbaum https://adnauseam.io 
-Non Views by Dries Depoorter https://driesdepoorter.be/nonviews 
-Dragons by James Bridle http://jamesbridle.com/works/dragons 
-Katamari Hack by Alex Leone, David Nufer, David Truong http://kathack.com 
-Opinions Are My Own by Leon Eckert https://leoneckert.com/projects/opinions-are-my-own/
-Browser Surprise by Leon Eckert https://leoneckert.com/projects/browser-surprise/
-[Ethical Ad Blocker](http://tinysubversions.com/notes/ethical-ad-blocker) by Darius Kazemi
-[source](https://www.facebook.com/groups/535217243184658?multi_permalinks=1609062109133494)
+Greg Leuch [G.R.E.E.D.](http://fffff.at/g-r-e-e-d), [Occupy The Internet](http://fffff.at/occupy-internet-extensions), [Shaved Bieber](http://fffff.at/shaved-bieber-updates) (2011)
+Jamie Wilkinson, Greg Leuch [Google Alarm](https://fffff.at/google-alarm/) (2010) 
+Maddy Varner [Kardashian Krypt](http://fffff.at/kardashian-krypt) (2014)
+Daniel C. Howe, Mushon Zer-Aviv, Helen Nissenbaum [adnauseam.io](https://adnauseam.io) 
+Dries Depoorter [Non Views](https://driesdepoorter.be/nonviews) (2017)
+Alex Leone, David Nufer, David Truong [http://kathack.com](http://kathack.com) (2011)
+Leon Eckert [Opinions Are My Own](https://leoneckert.com/projects/opinions-are-my-own/) (2016), [Browser Surprise](https://leoneckert.com/projects/browser-surprise/)
+Tim Holman [What have you made today?](https://github.com/tholman/what-have-you-made-today)
+Owen Mundy, Joelle Dietrick, et al [Tally Saves the Internet](https://tallysavestheinternet.com/) (2021) 
+Theo Watson [Mittons Romney](http://fffff.at/mittens-romney-extension) (2012)
 
 </small>
 
 
 ---
 
-## Examples
+## Examples - 3
 
 
-MDN sample extension
-https://github.com/mdn/webextensions-examples
+- See the [Critical Web Design Index](https://criticalwebdesign.github.io/index/#extension) for more
+- [What chrome extensions as artworks are out there?](https://www.facebook.com/groups/535217243184658?multi_permalinks=1609062109133494)
+- MDN extension examples https://github.com/mdn/webextensions-examples
